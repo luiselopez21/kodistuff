@@ -1,0 +1,1114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="game.libretro.pcsx-rearmed"
+		name="Sony - PlayStation (PCSX ReARMed)"
+		version="22.0.0.10"
+		provider-name="PCSX Team, notaz, Exophase">
+	<requires>
+		<import addon="game.libretro" version="1.0.0"/>
+		<import addon="game.controller.ps.gamepad" version="1.0.0"/>
+		<import addon="game.controller.ps.dualshock" version="1.0.0"/>
+		<import addon="game.controller.ps.dualanalog" version="1.0.0"/>
+		<import addon="game.controller.ps.multitap" version="1.0.0"/>
+	</requires>
+	<extension point="kodi.gameclient"
+			library_windows="game.libretro.pcsx-rearmed.dll">
+		<platforms>PlayStation</platforms>
+		<extensions>bin|cue|img|mdf|pbp|toc|cbn|m3u|chd</extensions>
+		<supports_vfs>false</supports_vfs>
+		<supports_standalone>false</supports_standalone>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Sony - PlayStation (PCSX ReARMed) r22</summary>
+		<description lang="en_GB">PCSX ReARMed is another PCSX fork based on the PCSX-Reloaded project, which itself contains code from PCSX, PCSX-df and PCSX-Revolution. This version features a MIPS-&amp;gt;ARM recompiler, NEON GTE code and more performance improvements.
+
+Supported files: .bin, .cue, .img, .mdf, .pbp, .toc, .cbn, .m3u, .chd</description>
+		<license>GPLv2</license>
+		<platform>windows-x86_64</platform>
+		<source>https://github.com/kodi-game/game.libretro.pcsx-rearmed</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon
+  id="plugin.games.rom.collection.browser.widget"
+  version="0.2.0"
+  name="Rom Collection Browser Widget"
+  provider-name="bruny, malte">
+  <requires>
+    <!-- Require Kodi Krypton or above -->
+    <import addon="xbmc.addon" version="17.0.0"/>
+    <!--<import addon="xbmc.gui" version="5.12.0"/>-->
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="service.rom.collection.browser" version="1.0.0"/>
+	<import addon="script.games.rom.collection.browser" version="2.2.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable game</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="de">Zusatz Addon fÃ¼r den Rom Collection Browser. Wird verwendet, um Spiele auf dem Kodi Home Screen anzuzeigen. Nur fÃ¼r Skins, die das Skin shortcuts addon unterstÃ¼tzen.</summary>
+    <summary lang="en">Supplement addon for Rom Collection Browser. Used to add your games to Kodis home screen. Only for skins that support the skin shortcuts addon.</summary>
+    <description lang="de"></description>
+    <description lang="en"></description>
+    <language></language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>forum.kodi.tv/showthread.php?tid=70115</forum>
+    <website>https://github.com/maloep/romcollectionbrowser</website>
+    <source>https://github.com/maloep/romcollectionbrowser</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.library.node.editor" name="Library Node Editor" version="1.0.11" provider-name="Unfledged, Team-Kodi">
+    <requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+		<import addon="script.module.unidecode" version="0.4.16"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de">Benutzerdefinierte Bibliotheksknoten verwalten.</summary>
+		<summary lang="en">Manage custom library nodes.</summary>
+		<summary lang="en_NZ">Manage custom library nodes.</summary>
+		<summary lang="en_US">Manage custom library nodes.</summary>
+		<summary lang="fr">Gére des nœuds de médiathèque personnalisés.</summary>
+		<summary lang="fr_CA">Gérer des nœuds de médiathèque personnalisés.</summary>
+		<summary lang="it">Gestisci nodi libreria personalizzati</summary>
+		<summary lang="ko">사용자 라이브러리 노드 관리자</summary>
+		<summary lang="lt">Tvarkykite savus bibliotekos mazgus.</summary>
+		<summary lang="nl">Beheer aangepaste bibliotheek nodes. </summary>
+		<summary lang="pl">Zarządzanie niestandardowymi węzłami biblioteki.</summary>
+		<summary lang="pt_BR">Gerenciar nós customizados da biblioteca</summary>
+		<summary lang="ro">Administrați noduri mediatecă personalizate</summary>
+		<description lang="de">Benutzerdefinierte Bibliotheksknoten erstellen und bearbeiten.</description>
+		<description lang="en">Create and edit custom library nodes.</description>
+		<description lang="en_NZ">Create and edit custom library nodes.</description>
+		<description lang="en_US">Create and edit custom library nodes.</description>
+		<description lang="fr">Crée et modifie des nœuds de médiathèque personnalisés.</description>
+		<description lang="fr_CA">Créer et modifier des nœuds de médiathèque personnalisés.</description>
+		<description lang="it">Crea e modifica nodi libreria personalizzati.</description>
+		<description lang="ko">사용자 라이브러리 노드를 생성하고 편집합니다.</description>
+		<description lang="lt">Sukurkite ir keiskite savus bibliotekos mazgus.</description>
+		<description lang="nl">Creëer en wijzig aangepaste bibliotheek nodes.</description>
+		<description lang="pl">Tworzenie i edytowanie niestandardowych węzłów biblioteki.</description>
+		<description lang="pt_BR">Crie e edite nós customizados na biblioteca</description>
+		<platform>all</platform>
+		<license>GPL-2.0-only</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=224512</forum>
+		<source>https://github.com/XBMC-Addons/plugin.library.node.editor</source>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+		<news>
+			1.0.11 (7/1/2020)
+				- Fixes parent nodes
+		</news>
+	</extension>
+</addon>
+
+<addon id="plugin.video.netflix" name="Netflix" version="1.12.4" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
+  <requires>
+    <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="script.module.addon.signals" version="0.0.3"/>
+    <import addon="script.module.future" version="0.17.1"/>
+    <import addon="script.module.inputstreamhelper" version="0.3.3"/>
+    <import addon="script.module.pycryptodome" version="3.4.3"/>
+    <import addon="script.module.requests" version="2.12.4"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py"/>
+  <extension point="xbmc.python.module" library="packages/mysql-connector-python"/>
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="cs_CZ">Netflix</summary>
+    <description lang="cs_CZ">Plugin pro sledování filmů, seriálů online z Netflixu</description>
+    <disclaimer lang="cs_CZ">Použití tohoto doplňku nemusí být ve vaší zemi pobytu legální - před instalací dbejte na vaše zákony.</disclaimer>
+    <summary lang="de_DE">Netflix</summary>
+    <description lang="de_DE">Addon für Netflix VOD-Dienste</description>
+    <disclaimer lang="de_DE">Möglicherweise ist die Verwendung dieses Addons in Ihrem Land illegal, Sie sollten dies unbedingt vor der Installation überprüfen.</disclaimer>
+    <summary lang="en_GB">Netflix</summary>
+    <description lang="en_GB">Netflix VOD Services Add-on</description>
+    <disclaimer lang="en_GB">The use of this add-on may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <summary lang="el_GR">Νέτφλιξ</summary>
+    <description lang="el_GR">Πρόσθετο υπηρεσιών κατά παραγγελία του Νέτφλιξ</description>
+    <disclaimer lang="el_GR">Η χρήση αυτού του προσθέτου μπορεί να μην είναι νόμιμη στην χώρα που κατοικείτε - παρακαλώ ελέγξτε τους τοπικούς νόμους πριν την εγκατάσταση.</disclaimer>
+    <summary lang="nl_NL">Netflix</summary>
+    <description lang="nl_NL">Bekijk Netflix films en tvprogramma's in Kodi.</description>
+    <disclaimer lang="nl_NL">Sommige delen van deze add-on zijn mogelijk onwettig in jouw land - raadpleeg de lokale wetgeving alvorens deze add-on te installeren.</disclaimer>
+    <summary lang="ja_JP">Netflix</summary>
+    <description lang="ja_JP">Netflix VOD サービスアドオン</description>
+    <disclaimer lang="ja_JP">一部の国では、このアドオンを使用するのが不法でありますので、設置する前に必ず関連法律を確認してください</disclaimer>
+    <summary lang="ko_KR">Netflix</summary>
+    <description lang="ko_KR">Netflix VOD 서비스애드온</description>
+    <disclaimer lang="ko_KR">일부 국가에서는 이 애드온을 사용하는 것이 불법일 수도 있으니, 설치하기전 관련 법을 확인하기 바랍니다.</disclaimer>
+    <description lang="it_IT">Netflix Add-on servizi VOD</description>
+    <disclaimer lang="it_IT">L'utilizzo di questo add-on potrebbe non essere legale nel vostro paese di residenza - si prega di verificare le leggi in vigore prima dell'installazione.</disclaimer>
+    <summary lang="es_ES">Netflix</summary>
+    <description lang="es_ES">Complemento para los Servicios VOD de Netflix</description>
+    <disclaimer lang="es_ES">El uso de este complemento puede no ser legal en su país de residencia - Por favor, consulte las leyes locales antes de instalarlo.</disclaimer>
+    <summary lang="hu_HU">Netflix</summary>
+    <description lang="hu_HU">Netflix VOD kiegészítő a Kodihoz</description>
+    <disclaimer lang="hu_HU">Előfordulhat, hogy a kiegészítő használata nem törvényes az Ön országában - telepítés előtt tájékozódjon a helyi törvényekről</disclaimer>
+    <summary lang="pt_BR">Netflix</summary>
+    <description lang="pt_BR">Add-on para os serviços VOD do Netflix</description>
+    <disclaimer lang="pt_BR">O uso deste addon pode não ser legal no seu país de residência - por favor, verifique as suas leis locais antes de instalar.</disclaimer>
+    <summary lang="tr_TR">Netflix</summary>
+    <description lang="tr_TR">Netflix VOD Hizmetleri Eklentisi</description>
+    <disclaimer lang="tr_TR">Bu eklentinin bazı bölümleri ikamet ettiğiniz ülkede yasal olmayabilir - lütfen yüklemeden önce yerel yasalarınıza bakın.</disclaimer>
+    <summary lang="ro_RO">Netflix</summary>
+    <description lang="ro_RO">Add-on pentru servicii video la cerere Netflix</description>
+    <disclaimer lang="ro_RO">Utilizarea acestui add-on ar putea fi ilegală în țara în care locuiți - vă rugăm să verificați legile locale înainte de instalare.</disclaimer>
+    <summary lang="sv_SE">Netflix</summary>
+    <description lang="sv_SE">Netflix VOD Service-tillägg</description>
+    <disclaimer lang="sv_SE">Användandet av detta tillägg kanske inte är lagligt i ditt hemland - kontrollera med dina lokala lagar innan du installerar.</disclaimer>
+    <summary lang="zh_CN">Netflix</summary>
+    <description lang="zh_CN">Netflix VOD服务附加组件</description>
+    <disclaimer lang="zh_CN">此附加组件在您的居住国可能不合法-请在安装前与您当地的法律核对。</disclaimer>
+    <summary lang="fr_FR">Netflix</summary>
+    <description lang="fr_FR">Extension Netflix SVoD</description>
+    <disclaimer lang="fr_FR">L'utilisation de cette extension n'est peut-être pas légale dans votre pays de résidence - renseignez-vous avant de l'installer</disclaimer>
+    <summary lang="pl_PL">Netflix</summary>
+    <description lang="pl_PL">Wtyczka dla usług VOD serwisu Netflix</description>
+    <disclaimer lang="pl_PL">Korzystanie z tego dodatku może być niezgodne z prawem w twoim kraju zamieszkania - przed zainstalowaniem zapoznaj się z lokalnymi przepisami.</disclaimer>
+    <summary lang="he_IL">Netflix</summary>
+    <description lang="he_IL">תוסף VOD לשירות של Netflix</description>
+    <disclaimer lang="he_IL">השימוש בתוסף זה עלול להיות לא חוקי במדינת מגוריך - אנא בדוק את החוק ברשות המקומית לפני ההתקנה</disclaimer>
+	<assets>
+      <icon>resources/media/icon.png</icon>
+      <fanart>resources/media/fanart.jpg</fanart>
+      <screenshot>resources/media/screenshot-01.jpg</screenshot>
+      <screenshot>resources/media/screenshot-02.jpg</screenshot>
+      <screenshot>resources/media/screenshot-03.jpg</screenshot>
+      <screenshot>resources/media/screenshot-04.jpg</screenshot>
+      <screenshot>resources/media/screenshot-05.jpg</screenshot>
+    </assets>
+    <language>en cs de es fr he hr hu it ja ko nl pl pt ro sv tr zh</language>
+    <platform>all</platform>
+    <license>MIT</license>
+    <website>https://www.netflix.com</website>
+    <email></email>
+    <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
+    <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
+    <news>
+v1.12.4 (2021-04-02)
+- Fixes due to website changes (fix KeyError loco)
+    </news>
+  </extension>
+</addon>
+
+<addon id="plugin.video.youtube" name="YouTube" version="6.8.10" provider-name="anxdpanic, bromix">
+    <requires>
+        <import addon="xbmc.python" version="2.20.0"/>
+        <import addon="script.module.six" version="1.11.0"/>
+        <import addon="script.module.requests" version="2.12.4"/>
+        <import addon="script.module.inputstreamhelper" version="0.2.2" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="resources/lib/default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="resources/lib/startup.py" start="login"/>
+    <extension point="xbmc.python.module" library="resources/lib/"/>
+    <extension point="xbmc.addon.metadata">
+        <news>
+[fix] fix javascript player retrieval and playback of some videos for affected users |contrib: thomazz-nl|
+    - Invalid URL &amp;#39;http://&amp;#39;: No host supplied
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <summary lang="en_GB">Plugin for YouTube</summary>
+        <description lang="en_GB">YouTube is one of the biggest video-sharing websites of the world.</description>
+        <disclaimer lang="en_GB">This plugin is not endorsed by Google</disclaimer>
+        <summary lang="he_IL">תוסף עבור YouTube</summary>
+        <description lang="he_IL">YouTube הוא אחד מאתרי שיתוף הווידאו הגדולים בעולם.</description>
+        <summary lang="de_DE">Plugin für YouTube</summary>
+        <description lang="de_DE">YouTube ist eines der größten Video-Sharing-Websites der Welt.</description>
+        <summary lang="pl_PL">Wtyczka YouTube</summary>
+        <description lang="pl_PL">YouTube jest jednym z największych na świecie serwisów udostępniania wideo.</description>
+        <summary lang="hu_HU">YouTube kiegészítő</summary>
+        <description lang="hu_HU">A YouTube világ egyik legnagyobb videómegosztó weboldala.</description>
+        <summary lang="es_ES">Plugin para YouTube</summary>
+        <description lang="es_ES">YouTube es uno de los sitios web más grande del mundo para compartir vídeos.</description>
+        <disclaimer lang="es_ES">Este add-on no está respaldado por Google</disclaimer>
+        <summary lang="es_MX">Plugin para YouTube</summary>
+        <description lang="es_MX">YouTube es uno de los más grandes sitios web de intercambio de videos del mundo.</description>
+        <disclaimer lang="es_MX">Este add-on no está respaldado por Google</disclaimer>
+        <summary lang="ru_RU">Видеодополнение YouTube</summary>
+        <description lang="ru_RU">YouTube - популярнейший видеохостинговый сайт, предоставляющий пользователям услуги хранения, доставки и показа видео.</description>
+        <summary lang="fr_FR">Plugin pour YouTube</summary>
+        <description lang="fr_FR">YouTube est l'un des plus grands sites de partage vidéos du monde.</description>
+        <summary lang="zh_CN">YouTube附加元件</summary>
+        <description lang="zh_CN">「Youtube」是全世界最大的影片分享網站</description>
+        <summary lang="zh_TW">YouTube附加元件</summary>
+        <description lang="zh_TW">「Youtube」是全世界最大的影片分享網站</description>
+        <disclaimer lang="zh_TW">此附加元件未由Google支持</disclaimer>
+        <summary lang="bg_BG">Добавка за YouTube</summary>
+        <description lang="bg_BG">YouTube е един от най-големите уеб сайтове за споделяне на видео в целия свят.</description>
+        <summary lang="el_GR">Πρόσθετο YouTube</summary>
+        <description lang="el_GR">Το YouTube είναι μία από τις μεγαλύτερες ιστοσελίδες διαμοιρασμού βίντεο στον κόσμο.</description>
+        <disclaimer lang="el_GR">Η παρούσα μικροεφαρμογή δεν έχει υϊοθετηθεί από την Google</disclaimer>
+        <summary lang="nb_NO">Tillegg for YouTube</summary>
+        <description lang="nb_NO">YouTube er en av verdens største nettsider for videodeling.</description>
+        <summary lang="ko_KR">유튜브 플러그인</summary>
+        <description lang="ko_KR">유튜브는 세상에서 가장 큰 동영상 공유 사이트 중의 하나입니다.</description>
+        <summary lang="cs_CZ">Plugin pro YouTube</summary>
+        <description lang="cs_CZ">YouTube je jedna z největších webových stránek světa sdílející video.</description>
+        <disclaimer lang="cs_CZ">Tento plugin není schválen společností Google</disclaimer>
+        <summary lang="tr_TR">YouTube için eklenti</summary>
+        <description lang="tr_TR">YouTube, dünya üzerindeki en büyük video paylaşma platformlarından birisidir</description>
+        <disclaimer lang="tr_TR">Bu eklenti Google tarafından üretilmemiştir</disclaimer>
+        <platform>all</platform>
+        <license>GPL-2.0-only</license>
+        <forum>https://ytaddon.panicked.xyz/forum</forum>
+        <website>https://www.youtube.com</website>
+        <source>https://github.com/anxdpanic/plugin.video.youtube</source>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+    </extension>
+</addon>
+
+<addon
+  id="pvr.mediaportal.tvserver.custom"
+  version="1.0.1"
+  name="MediaPortal PVR Client Custom"
+  provider-name="Marcel Groothuis">
+  <requires>
+<import addon="kodi.binary.global.main" version="1.0.14"/>
+<import addon="kodi.binary.global.gui" version="5.12.0"/>
+<import addon="kodi.binary.instance.pvr" version="5.10.3"/></requires>
+  <extension
+    point="xbmc.pvrclient"
+    library_windows="pvr.mediaportal.tvserver.dll"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="af_ZA">Kodi voorprogram vir die MediaPortal TV Bediener (ffmpeg + tsreader weergawe)</summary>
+    <summary lang="be_BY">Kodi frontend for the MediaPortal TV Server (ffmpeg + tsreader version)</summary>
+    <summary lang="bg_BG">Клиент за ТВ сървър „MediaPortal“</summary>
+    <summary lang="ca_ES">Frontal de Kodi per al servidor de TV MediaPortal</summary>
+    <summary lang="cs_CZ">Rozhraní Kodi pro televizní server MediaPortal</summary>
+    <summary lang="cy_GB">Blaen Kodi ar gyfer Gweinydd Teledu MediaPortal (fersiwn ffmpeg + tsreader)</summary>
+    <summary lang="da_DK">Kodi frontend til MediaPortal TV server (ffmpeg + tsreader version)</summary>
+    <summary lang="de_DE">Kodi Oberfläche für den MediaPortal TV Server (ffmpeg + tsreader Version)</summary>
+    <summary lang="el_GR">Frontend του Kodi για το διακομιστή MediaPortal TV (έκδοση ffmpeg + tsreader)</summary>
+    <summary lang="en_AU">Kodi frontend for the MediaPortal TV Server (ffmpeg + tsreader version)</summary>
+    <summary lang="en_GB">Kodi frontend for the MediaPortal TV Server</summary>
+    <summary lang="en_NZ">Kodi frontend for the MediaPortal TV Server (ffmpeg + tsreader version)</summary>
+    <summary lang="en_US">Kodi frontend for the MediaPortal TV Server (FFmpeg + TSReader version)</summary>
+    <summary lang="es_AR">Interfaz Kodi para el MediaPortal TV Server (versión ffmpeg + tsreader)</summary>
+    <summary lang="es_ES">Interfaz Kodi para el MediaPortal TV Server (versión ffmpeg + tsreader)</summary>
+    <summary lang="es_MX">Kodi frontend para el MediaPortal TV Server</summary>
+    <summary lang="et_EE">Kodi liides MediaPortal TV serverile</summary>
+    <summary lang="fi_FI">Kodin MediaPortal TV-server -asiakasohjelma</summary>
+    <summary lang="fr_CA">Frontale Kodi pour le serveur télé MediaPortal</summary>
+    <summary lang="fr_FR">Interface logicielle Kodi pour le serveur TV de MediaPortal</summary>
+    <summary lang="gl_ES">O Interface do Kodi para o Servidor de TV de MediaPortal (versión de ffmpeg + tsreader)</summary>
+    <summary lang="he_IL">לקוח טלוויזיה חיה עבור MediaPortal (גרסת FFmpeg ו־TSReader)</summary>
+    <summary lang="hr_HR">Kodi sučelje za MediaPortal TV poslužitelj (ffmpeg + tsreader inačica)</summary>
+    <summary lang="hu_HU">Kodi előtét a MediaPortal TV kiszolgálóhoz (ffmpeg + tsreader)</summary>
+    <summary lang="id_ID">Frontend Kodi untuk Server TV MediaPortal (versi ffmpeg + tsreader)</summary>
+    <summary lang="is_IS">Framendi fyrir Kodi til að nota MediaPortal TV Server (ffmpeg + tsreader version)</summary>
+    <summary lang="it_IT">Frontend Kodi per il server MediaPortal TV (versione ffmpeg + tsreader)</summary>
+    <summary lang="ja_JP">MediaPortal TV サーバー (ffmpeg + tsreader バージョン) の Kodi フロントエンド</summary>
+    <summary lang="ko_KR">MediaPortal TV Server (ffmpeg + tsreader version) 을 위한 Kodi 프론트엔드</summary>
+    <summary lang="lt_LT">Kodi sąsaja MediaPortal TV serveriui (ffmpeg + tsreader versija)</summary>
+    <summary lang="lv_LV">Kodi galasistēma MediaPortal TV Server (ffmpeg + tsreader versija)</summary>
+    <summary lang="mk_MK">Kodi интерфејс за MediaPortal TV Server (ffmpeg + tsreader верзија)</summary>
+    <summary lang="ms_MY">Bahagian hadapan Kodi untuk Pelayan TV MediaPortal (versi ffmpeg + tsreader)</summary>
+    <summary lang="my_MM">MediaPortal TV Server အတွက် Kodi frontend (ffmpeg + tsreader version)</summary>
+    <summary lang="nb_NO">Kodi-drakt for MediaPortal TV-tjener (ffmpeg + tsreader-versjon)</summary>
+    <summary lang="nl_NL">Kodi frontend voor de Mediaportal TV Server</summary>
+    <summary lang="pl_PL">Klient telewizyjny dla MediaPortal TV  (wersja ffmpeg + tsreader)</summary>
+    <summary lang="pt_BR">Frontend  do Kodi para Servidor de TV MediaPortal (ffmpeg + versão tsreader)</summary>
+    <summary lang="pt_PT">Interface Kodi para MediaPortal TV Server (versão ffmpeg + tsreader)</summary>
+    <summary lang="ro_RO">Partea din față a Kodi pentru servitorul tv MediaPortal</summary>
+    <summary lang="ru_RU">Интерфейс Kodi для ТВ-сервера MediaPortal (версия ffmpeg + tsreader)</summary>
+    <summary lang="sk_SK">Kodi rozhranie pre MediaPortal TV server (verzia ffmpeg + tsreader)</summary>
+    <summary lang="sl_SI">Kodijev vmesnik za strežnik MediaPortal TV (ffmpeg + tsreader)</summary>
+    <summary lang="sr_RS">Kodi интерфејс за MediaPortal ТВ Сервер</summary>
+    <summary lang="sr_RS@latin">Kodi interfejs za MediaPortal TV Server</summary>
+    <summary lang="sv_SE">Kodi's frontend MediaPortal tv-server</summary>
+    <summary lang="tr_TR">MediaPortal TV Sunucusu için Kodi ön ucu (ffmpeg + tsreader sürümü)</summary>
+    <summary lang="uk_UA">Накладка Kodi для сервера ТВ MediaPortal'у  (версія ffmpeg + tsreader)</summary>
+    <summary lang="vi_VN">Giao tiếp Kodi cho MediaPortal TV Server (phiên bản ffmpeg + tsreader)</summary>
+    <summary lang="zh_CN">Kodi 的 MediaPortal TV 服务器前端</summary>
+    <summary lang="zh_TW">MediaPortal電視服務器的Kodi前端 (ffmpeg+tsreader版本)</summary>
+    <description lang="af_ZA">MediaPortal TV Bediener voorprogram. Ondersteun stroom van Lewendige TV &amp; Opnames, luister na Radio kanale, EPG en Tydhouers. Hierdie byvoegsel kombineer die voormalige ffmpeg en tsreader byvoegsels.</description>
+    <description lang="be_BY">MediaPortal TV Server frontend. Supports streaming of Live TV &amp; Recordings, listening to Radio channels, EPG and Timers. This addon combines the former ffmpeg and tsreader addons.</description>
+    <description lang="bg_BG">Клиент за ТВ сървър „MediaPortal“. Поддържа телевизия на живо и записване, слушане на радио канали, електронен програмен справочник и броячи.</description>
+    <description lang="ca_ES">Frontal del servidor de TV MediaPortal. És compatible amb les transmissions en línia de TV en directe i enregistraments, escolta de canals de ràdio, guia electrònica de programació (EPG) i temporitzadors.</description>
+    <description lang="cs_CZ">Rozhraní pro televizní server MediaPortal. Podporuje streamování živého vysílání a nahrávek, poslech kanálů rádia, televizní program a časovače.</description>
+    <description lang="cy_GB">Blaen Gweinydd Teledu Media Portal. Mae'n cynnal ffrydio Teledu Byw a Recordiadau, gwrando ar sianeli Radio, Amserlenni Rhaglenni Electronig ac Amseryddion. Mae'r ychwanegyn yn cynnwys y cyn ychwanegion ffmpeg a tsreader.</description>
+    <description lang="da_DK">MediaPortal TV server frontend. Understøtter streaming af TV og Optagelser, Radiokanaler, EPG og Timere. Denne addon kombinerer de gamle ffmpeg og tsreader addons.</description>
+    <description lang="de_DE">Mediaportal TV Server Oberfläche. Unterstützt Live TV &amp; Aufnahmen, Radiokanäle, EPG und Timer. Dieses Addon kombiniert die ehemaligen ffmpeg- und tsreader-Addons.</description>
+    <description lang="el_GR">Frontend για το διακομιστή MediaPortal TV. Υποστηρίζει ροές Live TV &amp; Εγγραφές, ακρόαση Ραδιοφώνου, EPG και Χρονοδιακόπτες. Αυτό το πρόσθετο συνδυάζει τα προηγούμενα πρόσθετα ffmpeg και tsreader.</description>
+    <description lang="en_AU">MediaPortal TV Server frontend. Supports streaming of Live TV &amp; Recordings, listening to Radio channels, EPG and Timers. This addon combines the former ffmpeg and tsreader addons.</description>
+    <description lang="en_GB">MediaPortal TV Server frontend. Supports streaming of Live TV &amp; Recordings, listening to Radio channels, EPG and Timers.</description>
+    <description lang="en_NZ">MediaPortal TV Server frontend. Supports streaming of Live TV &amp; Recordings, listening to Radio channels, EPG and Timers. This addon combines the former ffmpeg and tsreader addons.</description>
+    <description lang="en_US">MediaPortal TV Server frontend. Supports streaming of Live TV &amp; Recordings, listening to Radio channels, EPG and Timers. This addon combines the former FFmpeg and TSReader addons.</description>
+    <description lang="es_AR">Interfaz MediaPortal TV Server. Soporta transmisión de TV en vivo y grabaciones, escuchar canales de radio, GEP y temporizadores. Este complemento combina los anteriores ffmpeg y tsreader.</description>
+    <description lang="es_ES">Interfaz MediaPortal TV Server. Soporta transmisión de TV en vivo y grabaciones, escuchar canales de radio, EPG y temporizadores. Este complemento combina los anteriores ffmpeg y tsreader.</description>
+    <description lang="es_MX">MediaPortal TV Server frontend. Soporta streaming de TV y grabaciones en vivo, escucha de canales de radio, EPG y temporizadores.</description>
+    <description lang="et_EE">MediaPortal TV serveri esi. Toetab telekanalite striimimist ja salvestamist, raadio kuulamist ja elektroonilist saatekava. See lisa kombineerib endas endised ffmpeg ja tsreader lisad.</description>
+    <description lang="fi_FI">MediaPortal TV Serverin asiakasohjelma. Tukee suorien tv-lähetysten ja tallennusten katsomista, radiokanavia, ohjelmaopasta ja ohjelmien ajastamista.</description>
+    <description lang="fr_CA">Frontale pour le serveur télé MediaPortal, prenant en charge la diffusion en continu des télés en direct et les enregistrements, l’écoute de chaînes radio, le GÉP et les minuteries.</description>
+    <description lang="fr_FR">Interface logicielle pour le serveur TV de MediaPortal. Il gère la lecture et l'enregistrement en continu de la TV en direct, l'écoute de radios, le guide électronique des programmes TV et les programmations.</description>
+    <description lang="gl_ES">Interface do Servidor de TV de MediaPortal. Soporta transmisión de TV en directo e Gravacións, escoita de canles de radio, Guía e programacións. Este complemento combina o antigo ffmpeg e os complementos tsreader.</description>
+    <description lang="he_IL">לקוח טלוויזיה חיה של MediaPortal. תומך בהזרמת שידורים חיים והקלטות, האזנה לרדיו, הצגת לוח שידורים ותזמון הקלטות. הרחבה זו משלבת את ההרחבות הקודמות המבוססות על FFmpeg ו־TSReader.</description>
+    <description lang="hr_HR">MediaPortal TV poslužitelj sučelje. Podržava stremanje i snimanje TV programa, slušanje radio programa, elektronski programski vodič (EPG) i vremenski zadano snimanje. Ovaj dodatak objedinjuje nekadašnje ffmpeg i tsreader dodatke.</description>
+    <description lang="hu_HU">MediaPortal TV kiszolgáló előtét. Élő adások, felvételek és rádióadások támogatása EPG-vel és időzítéssel. Ez a kiegészítő egyesíti az ffmpeg, és a tsreader kiegészítőket.</description>
+    <description lang="id_ID">Frontend Server TV MediaPortal. Mendukung pengaliran TV dan Rekaman langsung, mendengarkan kanal radio, EPG dan Timer. Pengaya ini mengkombinasikan penggaya ffmeg dan tsreader yang lama.</description>
+    <description lang="is_IS">Framendi fyrir MediaPortal TV. Styður streymingu á beinum útsendingum og upptökum, hlustun á útvarpsrásum, rafrænum sjónvarpsvísum (EPG) og tímatöku. Þessi viðbók sameinar fyrri viðbætur fyrir ffmpeg og tsreader </description>
+    <description lang="it_IT">Frontend del server MediaPortal TV. Supporta lo streaming di Live TV e le registrazioni, l'ascolto dei canali radio, EPG e i timer. Questo addon combina gli addon ffmpeg e tsreaded.</description>
+    <description lang="ja_JP">MediaPortal TV サーバーのフロントエンドです。ライブテレビのストリーミングや録画、ラジオチャンネルの視聴、EPG、タイマーなどをサポートしています。以前の ffmpeg アドオンと tsreader アドオンを組み合わせたものです。</description>
+    <description lang="ko_KR">MediaPortal TV Server 프론트엔드. TV 시청 &amp; 녹화, 라디오 채널 청취, EPG 및 타이머 지원. 이 애드온은 이전의 ffmpeg 과 tsreader 애드온을 합친 것입니다.</description>
+    <description lang="lt_LT">MediaPortal TV Serverio sąsaja. Palaiko televizijos transliacijas ir Įrašus, radijo kanalus, EPG ir laikmačius. Šis priedas apjungia ankstesnius ffmpeg ir TSreader priedus.</description>
+    <description lang="lv_LV">MediaPortal TV Server galasistēma. Atbalsta tiešraides TV un ierakstu straumēšanu, radio kanālu klausīšanos, EPG un taimerus. Šis pielikums kombinē senākos ffmpeg un tsreader pielikumus.</description>
+    <description lang="mk_MK">MediaPortal TV Server frontend. Supports streaming of Live TV &amp; Recordings, listening to Radio channels, EPG and Timers. This addon combines the former ffmpeg and tsreader addons.</description>
+    <description lang="ms_MY">Bahagian hadapan Pelayan TV MediaPortal; menyokong penstriman TV Langsung &amp; Rakaman, mendengar saluran Radio, EPG dan Pemasa. Tambahan ini gabungkan tambahan ffmpef fan tsreader terdahulu.</description>
+    <description lang="nb_NO">MediaPortal TV-tjenerdrakt. Støtter strømming av direkte-TV og opptak, Lytting til radiokanaler, EPG og tidsur. Dette tillegget kombinererer de tidligere ffmpeg- og tsreader -tilleggene.</description>
+    <description lang="nl_NL">MediaPortal TV Server frontend. Ondersteunt het bekijken van Live-TV en opnames, het beluisteren van radiozenders, het tonen van de EPG en het inplannen/beheren van nieuwe opnames (Timers).</description>
+    <description lang="pl_PL">Klient telewizyjny dla MediaPortal obsługuje transmisje kanałów radiowych i telewizyjnych, nagrywanie i harmonogram nagrań oraz funkcje przewodnika telewizyjnego. Klient ten łączy w sobie funkcje wcześniejszych klientów ffmpeg i tsreader.</description>
+    <description lang="pt_BR">Frontend do Servidor de TV  do MediaPortal. Suporta streaming de TV Ao Vivo e Gravações, escutar canais de rádio, EPG e Agendamentos. Este addon combina os antigos addons ffmpeg e tsreader</description>
+    <description lang="pt_PT">Interface para o servidor MediaPortal TV. Suporta transmissão de TV em direto e gravações, ouvir estações de Rádio, EPG e Temporizadores. Este add-on combina os antigos add-ons ffmpeg e tsreader.</description>
+    <description lang="ro_RO">Partea din față pentru servitorul tv MediaPortal. Capabil de difuzarea televiunii în direct și a înregistrărilor, ascultarea canalelor Radio channels, ghid tv electronic și cronometre.</description>
+    <description lang="ru_RU">Интерфейс Kodi для ТВ-сервера MediaPortal. Поддерживает просмотр и запись ТВ, прослушивание радио, EPG и таймеры. Это дополнение заменяет старые дополнения ffmpeg и tsreader.</description>
+    <description lang="sk_SK">Rozhranie pre MediaPortal TV server. Podporuje streamovanie živého televízneho vysielania a nahrávok, počúvanie rozhlasových kanálov, EPG a časovače. Tento doplnok zlučuje dohromady bývalé doplnky ffmpeg a tsreader.</description>
+    <description lang="sl_SI">Vmesnik za MediaPortal TV strežnik. Podpira pretakanje televizije v živo &amp; posnetkov, poslušanje radia, EPG in časovnike. Ta dodatek združuje prejšnja dodatka ffmpeg in tsreader.</description>
+    <description lang="sr_RS">MediaPortal ТВ Сервер интерфејс. Подржава стримовање ТВ Уживо &amp; Снимака, слушање Радио канала, EPG и Тајмере.</description>
+    <description lang="sr_RS@latin">MediaPortal TV Server interfejs. Podržava strimovanje TV Uživo &amp; Snimaka, slušanje Radio kanala, EPG i Tajmere.</description>
+    <description lang="sv_SE">MediaPortal tv-server frontend. Stödjer strömning av Live-TV &amp; inspelningar, lyssna på radiokanaler, EPG och timers.</description>
+    <description lang="tr_TR">MediaPortal TV Sunucusu ön ucu. Canlı TV akışı ve kayıt yapabilme, radyo kanalları dinleme, EPG ve zamanlayıcıları destekler. Bu eklenti eski ffmpeg ve tsreader eklentilerini birleştirir.</description>
+    <description lang="uk_UA">Накладка для сервера ТВ MediaPortal. Підтримує потокове Live TV і запис, прослуховування радіо каналів, телегід та планування. Цей додаток сполучає колишні додатки ffmpeg і tsreader.</description>
+    <description lang="vi_VN">Giao tiếp cho MediaPortal TV Server. Hỗ trợ truyền phát và thu chương trình Live TV, nghe Radio, hẹn giờ và hiển thị lịch trình chiếu (EPG). Addon này kết hợp cho các addon cũ của ffmpeg và tsreader.</description>
+    <description lang="zh_CN">MediaPortal TV 服务器前端。支持流媒体直播电视和录像、收听电台、电子节目单和定时器。</description>
+    <description lang="zh_TW">MediaPortal電視服務器的前端。支援的串流檔案包括有：電視直播和錄影，收聽廣播頻道，電子節目表和計時器。這個插件結合了先前ffmpeg和tsreader的插件。</description>
+    <disclaimer lang="af_ZA">Hierdie is onstabiele sagteware! Die outeurs is op geen manier verantwoordelik vir gefaalde opnames, inkorrekte tydhouers, gemorsde ure, of enige ander ongewensde effekte.</disclaimer>
+    <disclaimer lang="be_BY">This is unstable software! The authors are in no way responsible for failed recordings, incorrect timers, wasted hours, or any other undesirable effects..</disclaimer>
+    <disclaimer lang="bg_BG">Тази програма е нестабилна! Авторите не носят отговорност за неуспешно записване, некоректни броячи, пропиляното време и други нежелани ефекти.</disclaimer>
+    <disclaimer lang="ca_ES">Això és programari inestable! Els autors no són de cap manera responsables dels enregistraments que han fallat, temporitzadors incorrectes, hores perdudes, o qualsevol altre efecte indesitjat.</disclaimer>
+    <disclaimer lang="cs_CZ">Autoři nejsou žádným způsobem zodpovědní za neúspěšná nahrávání, chybné časovače, ztracený čas nebo jakékoliv jiné nežádoucí výsledky.</disclaimer>
+    <disclaimer lang="cy_GB">Mae'r feddalwedd hon yn fregus! Nid yw'r awduron yn gyfrifol mewn unrhyw ffordd am fethu recordio, amseru gwallus, oriau wedi eu gwastraffu nac effeithiau anymunol eraill.</disclaimer>
+    <disclaimer lang="da_DK">Dette er ustabil software! Ophavsmændene er på ingen måde ansvarlige for mislykkede optagelser, ukorrekte timere, spildte timer, eller andre uønskede konsekvenser..</disclaimer>
+    <disclaimer lang="de_DE">Dies ist instabile Software! Die Autoren sind in keiner Weise verantwortlich für fehlgeschlagene Aufnahmen, falsche Timer, verschwendete Zeit oder andere ungewünschte Effekte.</disclaimer>
+    <disclaimer lang="el_GR">Ασταθές πρόγραμμα! Οι δημιουργοί δεν είναι σε καμία περίπτωση υπεύθυνοι για αποτυχημένες εγγραφές, λανθασμένους χρονοδιακόπτες, χαμένες ώρες, ή κάθε είδους ανεπιθύμητα αποτελέσματα..</disclaimer>
+    <disclaimer lang="en_AU">This is unstable software! The authors are in no way responsible for failed recordings, incorrect timers, wasted hours, or any other undesirable effects..</disclaimer>
+    <disclaimer lang="en_GB">The authors are in no way responsible for failed recordings, incorrect timers, wasted hours, or any other undesirable effects.</disclaimer>
+    <disclaimer lang="en_NZ">This is unstable software! The authors are in no way responsible for failed recordings, incorrect timers, wasted hours, or any other undesirable effects..</disclaimer>
+    <disclaimer lang="en_US">This is unstable software! The authors are in no way responsible for failed recordings, incorrect timers, wasted hours, or any other undesirable effects..</disclaimer>
+    <disclaimer lang="es_AR">¡Este software es inestable! Los autores no se responsabilizan por grabaciones fallidas, temporizadores incorrectos, horas perdidas, o cualquier otro efecto no deseado..</disclaimer>
+    <disclaimer lang="es_ES">¡Este es un software inestable! Los autores no son de ninguna manera responsables de las grabaciones fallidas o incorrectas, las temporizadores perdidas, ni otros efectos no deseables..</disclaimer>
+    <disclaimer lang="es_MX">¡Esto es software inestable! Los autores no son de ninguna manera responsables por grabaciones fallidas, temporizadores incorrectos, horas perdidas o cualquier otro efecto no deseado...</disclaimer>
+    <disclaimer lang="et_EE">See on ebastabiilne tarkvara! Autorid ei ole kuidagi moodi vastutavad nurjunud salvestiste, ebaõige aegrelee, raisatud tundide ega muude soovimatute asjade eest.</disclaimer>
+    <disclaimer lang="fi_FI">Tämä on epävakaa ohjelma! Sen tekijät eivät ole millään muotoa vastuussa epäonnistuneista tallennuksista, virheellisistä ajastuksista, haaskatusta ajasta, verenpaineen noususta tai mistään muusta epäsuotuisasta vaikutuksesta.</disclaimer>
+    <disclaimer lang="fr_CA">Les auteurs ne sont aucunement responsables des enregistrements défaillants, des minuteries erronées, des heures perdues ou tout autre effet indésirable.</disclaimer>
+    <disclaimer lang="fr_FR">Logiciel en cours d'élaboration ! Les auteurs ne sont en aucun cas responsables de l'échec des enregistrements, programmations défectueuses, temps perdu ou autres effets indésirables.</disclaimer>
+    <disclaimer lang="gl_ES">Software non estable, os autores non se fan responsábeis dos erros na gravacións, temporizadores incorrectos, e outros efectos non desexados.</disclaimer>
+    <disclaimer lang="he_IL">זוהי איננה הרחבה יציבה! המפתחים אינם אחראים על כשלון בניגון, זמנים שגויים במדריך השידורים, שעות מבוזבזות או כל תופעה לא רצויה אחרת.</disclaimer>
+    <disclaimer lang="hr_HR">Ovo je nestabilan softver! Autori nisu ni na koji način odgovorni za neuspjelo snimanje, netočna vremena snimanja, izgubljene sate, ili bilo koje druge nepoželjne učinke...</disclaimer>
+    <disclaimer lang="hu_HU">Ez nem stabil szoftver! A készítők nem vállalnak felelősséget, a hibás felvételért, rossz időzítésért, elvesztegetett időért...</disclaimer>
+    <disclaimer lang="hy_AM">Սա անկայուն ծրագրային ապահովում է: Հեղինակները պատասխանատու չեն վատ ձայնագրումների, սխալ ժամանակացույցերի, կորած ժամանակի կամ այլ ոչ ցանկալի երևույթների համար:</disclaimer>
+    <disclaimer lang="id_ID">Ini merupakan software yang tidak stabil! Penulis tidak bertanggung jawab untuk rekaman gagal, timer salah, waktu terbuang, atau efek tak diinginkan lainnya...</disclaimer>
+    <disclaimer lang="is_IS">Þetta er óstöðugur hugbúnaður! Höfundarnir eru á engann hátt ábyrgir fyrir misheppnuðum upptökum, röngum upptökutímum, klukkustundum sem að fóru í súginn eða nokkrum öðrum óæskilegum áhrifum.</disclaimer>
+    <disclaimer lang="it_IT">Questo software non è stabile! Gli autori non sono responsabili per registrazioni fallite, timer non corretti, ore perse, o altri effetti indesiderati...</disclaimer>
+    <disclaimer lang="ja_JP">これは不安定なソフトウェアです！本プログラムの作者は、録画の失敗、正確に作動しなかったタイマー、無駄にした時間、その他あらゆる好ましくない結果について責任を負わないものとします。</disclaimer>
+    <disclaimer lang="ko_KR">이 소프트웨어는 불안정합니다! 제작자는 녹화 실패, 부정확한 타이머, 시간 낭비 및 기타 예상하지 못한 결과에 대해 책임지지 않습니다..</disclaimer>
+    <disclaimer lang="lt_LT">Tai yra nestabili programinė įranga! Autorius jokiu būdu neatsakingas už nepavykusius įrašus, neteisingus laikmačius, iššvaistytas valandas ar nutikus kitiems nepageidaujamiems poveikiams ...[COLOR=red](Kodi.lt siūlo/rekomenduoja testuojant šį priedą persijungti į Anglų [orinali] kalbą)[/COLOR]</disclaimer>
+    <disclaimer lang="lv_LV">Šī ir nestabila programmatūra! Autori nav atbildīgi par nesanākušiem ierakstiem, nepareiziem taimeriem, iztērētām stundām vai jebkādiem citiem nevēlamiem efektiem..</disclaimer>
+    <disclaimer lang="mk_MK">Ова е нестабилен софтвер! Авторите на ниту еден начин не одговараат за неуспешни снимки, неточни тајмери, потрошени часови, или било кои други несакани ефекти.</disclaimer>
+    <disclaimer lang="mn_MN">Тус програм нь гүйцэд хийгдэж дуусаагүй! Зохиогч нь алдаатай бичлэг, цагийн буруу хөтлөлт, алдагдсан цаг хугацаа эсвэл бусад ямар нэгэн хүсээгүй үр дүнд хариуцлага хүлээхгүй.</disclaimer>
+    <disclaimer lang="ms_MY">Ini merupakan perisian tidak stabil! Pengarang tidak bertanggungjawab atas kegagalan rakaman, pemasa tidak betul, masa yang dibazirkan, atau apa jua kesan yang tidak dikehendaki..</disclaimer>
+    <disclaimer lang="mt_MT">Dan il-programm mhuwiex stabbli! L-Awturi m'humiex responsabbli bl-ebda mod għal rekordings li ma jirnexxewx, arloġġi żbaljati, siegħat moħlija, jew kwalunkwe effett ieħor mhux mixtieq.</disclaimer>
+    <disclaimer lang="nb_NO">Dette er ustabilt programvare! Forfatterne er ikke ansvarlig på noen måte for ødelagte opptak, feilstilte tidsur, bortkastede timer, eller andre uønskede hendelser…</disclaimer>
+    <disclaimer lang="nl_NL">Deze software is niet 100% stabiel! De auteurs zijn op geen enkele wijze aansprakelijk voor mislukte opnames, verspilde tijd, of enig ander ongewild neveneffect..</disclaimer>
+    <disclaimer lang="pl_PL">Oprogramowanie nadal jest w fazie rozwoju i jest niestabilne! Autorzy w żaden sposób nie są odpowiedzialni za nieudane nagrania, błędy w harmonogramie nagrań, zmarnowany czas ani jakiekolwiek inne niepożądane efekty.</disclaimer>
+    <disclaimer lang="pt_BR">Este é um software instável! Os autores não são responsáveis por falhas de gravações, agendamentos incorretos, horas desperdiçadas, ou quaisquer outros efeitos indesejados.</disclaimer>
+    <disclaimer lang="pt_PT">Este software é instável! Os autores não são de forma alguma responsáveis por gravações falhadas, temporizadores incorrectos, horas desperdiçadas, ou qualquer outro tipo de efeitos indesejáveis..</disclaimer>
+    <disclaimer lang="ro_RO">Acesta nu este o aplicație definitivă! Autorii nu sunt în nici un fel responsabili pentru înregistrări eșuate, cronometre incorecte, ore pierdute, sau orice alte efecte nedorite...</disclaimer>
+    <disclaimer lang="ru_RU">Это нестабильная программа! Авторы не несут ответственности за неудачную запись, неправильные таймеры, потраченное время и другие нежелательные последствия.</disclaimer>
+    <disclaimer lang="si_LK">මෙය අස්ථිර මෘදුකාංගයකි! මෙහි සිදුවන පටිගත කිරීම් අසාර්ථක වීම්, සාවද්‍ය මුහුර්තක, නාස්ති වූ කාලයන්, හෝ වෙනත් යමිකිසි නුසුදුසු බලපෑම් සඳහා කතෘ වග කියනු නොලැබේ.</disclaimer>
+    <disclaimer lang="sk_SK">Tento softvér nie je stabilný! Autori nenesú žiadnu zodpovednosť za chybné nahrávky vysielania, nesprávne časovače alebo iné neželané udalosti spôsobené týmto softvérom..</disclaimer>
+    <disclaimer lang="sl_SI">To je nestabilna programska oprema! Avtorji niso odgovorni za neuspela snemanja, nepravilne časovnike, zapravljen čas in katerikoli drug neželen učinek...</disclaimer>
+    <disclaimer lang="sq_AL">Ky program nuk është ende stabil! Autorët së këtij programi nuk janë në as një menyr përgjegjës për rregistrime të gabuara, timer të pasaktë, kohë të humbur ose efekte të tillë të padëshirueshëm.</disclaimer>
+    <disclaimer lang="sr_RS">Аутори ни на који начин нису одговорни за неуспела снимања, неисправне тајмере, изгубљене сате, или било које друге нежељене ефекте...</disclaimer>
+    <disclaimer lang="sr_RS@latin">Autori ni na koji način nisu odgovorni za neuspela snimanja, neispravne tajmere, izgubljene sate, ili bilo koje druge neželjene efekte...</disclaimer>
+    <disclaimer lang="sv_SE">Upphovsmännen är inte ansvariga för misslyckade inspelningar, inkorrekta timers, bortslösade timmar, eller några andra oönskade effekter..</disclaimer>
+    <disclaimer lang="szl">To je niystabilny softwer! Autōry niy sōm ôdpedzialne za niypodarzōne graniy, niynŏleżne godziny EPG, stracōne godziny i inksze niychciane efekty.</disclaimer>
+    <disclaimer lang="te_IN">ఇది అస్థిర సాఫ్ట్వేర్! విఫలమైన రికార్డింగ్లు, తప్పు టైమర్లు, వృధా గంటల, లేదా ఏ ఇతర అవాంఛనీయ ప్రభావాలకు ఏ విధంగా రచయితలు భాద్యుతులు కారు.</disclaimer>
+    <disclaimer lang="tg_TJ">Ин нармафзори ноустувор аст! Муаллифон барои вайрониҳои сабт, вақтсанҷҳои нодуруст, соатҳои бефоида ва дигар таъсирҳои номатлуб ҷавобгар намебошанд.</disclaimer>
+    <disclaimer lang="tr_TR">Bu kararsız bir yazılımdır! Yapımcılar hatalı kayıtlardan, bozuk sürelerden, harcanan vakitten veya herhangi bir olumsuz etkiden dolayı sorumlu tutulamaz.</disclaimer>
+    <disclaimer lang="uk_UA">Це нестабільна програма! Автор не несуть жодної відповідальності за зіпсуті записи, неправильні таймери, потрачений час, та інші небажані ефекти.</disclaimer>
+    <disclaimer lang="vi_VN">Đây là phần mềm không ổn định! Các tác giả không chịu trách nhiệm đối với bản ghi âm thất bại, giờ không chính xác, giờ lãng phí, hoặc bất kỳ tác dụng không mong muốn khác...</disclaimer>
+    <disclaimer lang="zh_CN">作者不对录像失败、错误定时造成时间浪费或其它不良影响负责。</disclaimer>
+    <disclaimer lang="zh_TW">這是測試版軟體！其原創作者並無法對於以下情況負責，包含：錄影失敗，不正確的定時設定，多餘時數，或任何產生的其它不良影響...</disclaimer>
+    <platform>windows-x86_64</platform>
+  </extension>
+</addon>
+
+    <addon id="repository.kodistuff" name="Kodi Stuff" version="1.0" provider-name="luiselopez21">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="Kodi Stuff">
+            <info compressed="false">https://raw.githubusercontent.com/luiselopez21/kodistuff/master/_repo/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/luiselopez21/kodistuff/master/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/luiselopez21/kodistuff/master/_repo/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Kodi stuff</summary>
+            <description>Kodi stuff for personal use only.</description>
+            <platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+    </extension>
+</addon>
+
+<addon id="resource.images.moviegenrefanart.metrocity" name="Movie Genre Fanart - Metrocity" version="1.0.0" provider-name="DProudmoore">
+	<extension point="kodi.resource.images" compile="false" type="moviegenrefanart" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Movie Genre Fanart Pack - Metrocity</summary>
+		<description lang="en">Photographic style movie genre fanart backgrounds.</description>
+		<license>Creative Commons Attribution-Share Alike 3.0</license>
+		<source>https://github.com/dproudmoore/resource.images.moviegenrefanart.metrocity</source>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-09.jpg</screenshot>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="resource.images.skinbackgrounds.metrocity.custom" name="Skin Backgrounds - Metrocity Custom" version="1.0.1" provider-name="DProudmoore">
+	<extension point="kodi.resource.images" compile="false" type="skinbackgrounds" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Skin Backgrounds Pack - Metrocity</summary>
+		<description lang="en">Photographic style skin background images.</description>
+		<license>Creative Commons Attribution-Share Alike 3.0</license>
+		<source>https://github.com/dproudmoore/resource.images.skinbackgrounds.metrocity</source>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-09.jpg</screenshot>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="resource.images.weatherfanart.single" name="Weather Fanart - Single" version="0.0.6" provider-name="Silverxxx,Team Kodi">
+	<extension point="kodi.resource.images" compile="false" type="weather" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Weather Fanart Single</summary>
+		<description lang="en">A single Weather Fanart image for every weather condition</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.artwork.beef" name="Artwork Beef" version="0.28.6~adev" provider-name="rmrector">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="xbmc.json" version="6.20.0" />
+		<import addon="script.module.simplejson" version="3.3.0" />
+		<import addon="script.module.requests" version="2.9.1" />
+		<import addon="script.common.plugin.cache" version="2.5.8" />
+	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<menu id="kodi.core.manage">
+				<item library="context.py">
+					<label>AB: $ADDON[script.artwork.beef 32410]</label>
+					<visible>!Skin.HasSetting(disablecontext:script.artwork.beef) + [StringCompare(ListItem.DBTYPE, movie) | StringCompare(ListItem.DBTYPE, set) | StringCompare(ListItem.DBTYPE, tvshow) | StringCompare(ListItem.DBTYPE, episode) | StringCompare(ListItem.DBTYPE, musicvideo) | String.IsEqual(ListItem.DBTYPE, movie) | String.IsEqual(ListItem.DBTYPE, set) | String.IsEqual(ListItem.DBTYPE, tvshow) | String.IsEqual(ListItem.DBTYPE, episode) | String.IsEqual(ListItem.DBTYPE, musicvideo)]</visible>
+				</item>
+				<item library="context_gui.py">
+					<label>AB: $ADDON[script.artwork.beef 32411]</label>
+					<visible>!Skin.HasSetting(disablecontext:script.artwork.beef) + [StringCompare(ListItem.DBTYPE, movie) | StringCompare(ListItem.DBTYPE, set) | StringCompare(ListItem.DBTYPE, tvshow) | StringCompare(ListItem.DBTYPE, episode) | StringCompare(ListItem.DBTYPE, musicvideo) | String.IsEqual(ListItem.DBTYPE, movie) | String.IsEqual(ListItem.DBTYPE, set) | String.IsEqual(ListItem.DBTYPE, tvshow) | String.IsEqual(ListItem.DBTYPE, episode) | String.IsEqual(ListItem.DBTYPE, musicvideo)]</visible>
+				</item>
+				<item library="context_debug_remove.py">
+					<label>AB: $ADDON[script.artwork.beef 32427]</label>
+					<visible>Skin.HasSetting(enablecontext:script.artwork.beef.debug) + [StringCompare(ListItem.DBTYPE, movie) | StringCompare(ListItem.DBTYPE, set) | StringCompare(ListItem.DBTYPE, tvshow) | StringCompare(ListItem.DBTYPE, episode) | StringCompare(ListItem.DBTYPE, musicvideo) | StringCompare(ListItem.DBTYPE, season) | String.IsEqual(ListItem.DBTYPE, movie) | String.IsEqual(ListItem.DBTYPE, set) | String.IsEqual(ListItem.DBTYPE, tvshow) | String.IsEqual(ListItem.DBTYPE, episode) | String.IsEqual(ListItem.DBTYPE, musicvideo) | StringCompare(ListItem.DBTYPE, season)]</visible>
+				</item>
+				<item library="context_debug_logitem.py">
+					<label>AB: $ADDON[script.artwork.beef 32430]</label>
+					<visible>Skin.HasSetting(enablecontext:script.artwork.beef.debug) + [StringCompare(ListItem.DBTYPE, movie) | StringCompare(ListItem.DBTYPE, set) | StringCompare(ListItem.DBTYPE, tvshow) | StringCompare(ListItem.DBTYPE, episode) | StringCompare(ListItem.DBTYPE, musicvideo) | String.IsEqual(ListItem.DBTYPE, movie) | String.IsEqual(ListItem.DBTYPE, set) | String.IsEqual(ListItem.DBTYPE, tvshow) | String.IsEqual(ListItem.DBTYPE, episode) | String.IsEqual(ListItem.DBTYPE, musicvideo)]</visible>
+				</item>
+			</menu>
+			<item library="context.py">
+				<label>AB: $ADDON[script.artwork.beef 32410]</label>
+				<visible>!Skin.HasSetting(disablecontext:script.artwork.beef) + [String.StartsWith(System.BuildVersion,18) | String.StartsWith(System.BuildVersion,19)] + [String.IsEqual(ListItem.DBTYPE, artist) | String.IsEqual(ListItem.DBTYPE, album) | String.IsEqual(ListItem.DBTYPE, song)]</visible>
+			</item>
+			<item library="context_gui.py">
+				<label>AB: $ADDON[script.artwork.beef 32411]</label>
+				<visible>!Skin.HasSetting(disablecontext:script.artwork.beef) + [String.StartsWith(System.BuildVersion,18) | String.StartsWith(System.BuildVersion,19)] + [String.IsEqual(ListItem.DBTYPE, artist) | String.IsEqual(ListItem.DBTYPE, album) | String.IsEqual(ListItem.DBTYPE, song)]</visible>
+			</item>
+			<item library="context_debug_remove.py">
+				<label>AB: $ADDON[script.artwork.beef 32427]</label>
+				<visible>Skin.HasSetting(enablecontext:script.artwork.beef.debug) + [String.StartsWith(System.BuildVersion,18) | String.StartsWith(System.BuildVersion,19)] + [String.IsEqual(ListItem.DBTYPE, artist) | String.IsEqual(ListItem.DBTYPE, album) | String.IsEqual(ListItem.DBTYPE, song)]</visible>
+			</item>
+			<item library="context_debug_logitem.py">
+				<label>AB: $ADDON[script.artwork.beef 32430]</label>
+				<visible>Skin.HasSetting(enablecontext:script.artwork.beef.debug) + [String.StartsWith(System.BuildVersion,18) | String.StartsWith(System.BuildVersion,19)] + [String.IsEqual(ListItem.DBTYPE, artist) | String.IsEqual(ListItem.DBTYPE, album) | String.IsEqual(ListItem.DBTYPE, song)]</visible>
+			</item>
+		</menu>
+	</extension>
+	<extension point="xbmc.service" start="login" library="service.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Automatically adds extra artwork for your media.</summary>
+		<description lang="en">Artwork Beef automatically adds extra artwork for TV shows and movies into your library. It grabs them from wonderful web services and the file system.</description>
+		<disclaimer lang="en">Artwork sources: fanart.tv, TheTVDB.com, The Movie Database, TheAudioDB, KyraDB</disclaimer>
+		<summary lang="es">Agrega automÃ¡ticamente ilustraciones adicionales para sus medios.</summary>
+		<description lang="es">Artwork Beef agrega automÃ¡ticamente ilustraciones adicionales para Series TV y PelÃ­culas a su biblioteca. Las ilustraciones son agregadas desde Servicios web y el Sistema de archivos local.</description>
+		<disclaimer lang="es">Fuente para ilustraciones: fanart.tv, TheTVDB.com, The Movie Database, TheAudioDB, KyraDB</disclaimer>
+		<news>v0.28.5 (2020-11-26)
+- fix: really really treat 403 as 404 and replace it
+
+v0.28.4 (2020-11-21)
+- fix: 403 change causing errors with other web service issues
+
+v0.28.1 - v0.28.3
+- fix: treat 403 as 404 and replace it
+- fix: don't throw an error when a movie set is lost
+- Fix: avoid adding duplicate fanart from TVDB
+- Fix: log full URL when download fails
+- Fix: remove KyraDB
+
+v0.28.0 (2020-02-08)
+- Feature: Add "Path exclusion" settings to skip processing media items by path
+		</news>
+		<source>https://github.com/rmrector/script.artwork.beef</source>
+		<forum>https://forum.kodi.tv/showthread.php?tid=258886</forum>
+		<website>https://rmrector.github.io/script.artwork.beef/</website>
+		<license>The MIT License</license>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="script.artwork.helper" name="Artwork Helper" version="0.9.2~adev" provider-name="rrector">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="xbmc.json" version="6.20.0" />
+		<import addon="xbmc.addon" version="17.0.0" />
+	</requires>
+	<extension point="xbmc.python.library" library="python/default.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Artwork Helper provides a couple of tools to skins and other add-ons for working with artwork.</summary>
+		<description lang="en">Artwork Helper provides a couple of tools to skins and other add-ons for working with artwork. See README.md for detailed usage.</description>
+		<disclaimer lang="en">Artwork Helper does not directly add functionality on its own and must be supported by skins or other add-ons.</disclaimer>
+		<source>https://github.com/rmrector/script.artwork.helper</source>
+		<forum>https://forum.kodi.tv/showthread.php?tid=236649</forum>
+		<news>
+v0.9.1 (2019-06-15)
+- Fix: add an image mime type so Kodi identifies image URLs without extensions
+- Fix: Kodi v19 Pyton 3 compatibility
+
+v0.9.0 (2018-03-25)
+- Feature: add a path to grab artwork from the currently playing item
+- Feature: add path option to grab artwork from multiple artists
+
+v0.8.0 (2017-11-08)
+- Update for Leia compatibility, Krypton is now lowest supported
+- remove `shuffle`
+		</news>
+		<license>The MIT License</license>
+		<platform>all</platform>
+		<language />
+		<website />
+		<email />
+		<assets />
+	</extension>
+</addon>
+
+<addon id="script.extendedinfo" name="ExtendedInfo Script" version="5.6.0" provider-name="phil65 (Philipp Temminghoff)">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+		<import addon="resource.images.studios.white" version="0.0.5"/>
+		<import addon="script.module.kodi65" version="1.0.0"/>
+		<import addon="script.module.routing" version="0.1.0"/>
+		<!-- 		<import addon="script.module.buggalo" version="1.1.6"/>-->
+	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<language/>
+		<summary lang="en">ExtendedInfo Script</summary>
+		<description lang="en">This script offers various possibilities to display online content inside skins as well as a complete MovieDB browser including info dialogs for various media types. Used services are themoviedb.org, theaudiodb.org, Trakt.TV, omdbapi.com and a lot more. Needs skin implementation for lot of functions.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=160558</forum>
+		<source>https://github.com/phil65/script.extendedinfo</source>
+		<email>phil65@kodi.tv</email>
+		<news>Fix support for Kodi L* nightlies[CR]Browser window improvements[CR]Fixes for TADB/LastFM</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+		</assets>
+	</extension>
+</addon>
+
+<addon
+  id="script.games.rom.collection.browser"
+  version="2.2.4"
+  name="Rom Collection Browser"
+  provider-name="bruny, malte">
+  <requires>
+    <!-- Require Kodi Krypton or above -->
+    <import addon="xbmc.addon" version="17.0.0"/>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="service.rom.collection.browser" version="1.0.0"/>
+    <!-- Required for scraping and parsing -->
+    <import addon="script.module.requests" version="2.18.4"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable game</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <news>2.2.4 (04/2020)
+- change url to thegamesdb API
+- remove legacy.thegamesdb.net scraper
+    </news>
+    <summary lang="be">Import, browse and launch games in XBMC</summary>
+    <summary lang="ca">Importa, cerca i arranca jocs en l'XBMC</summary>
+    <summary lang="da">Importere, gennemse og starte spil i XBMC</summary>
+    <summary lang="de">Importiert, verwaltet und startet Spiele in XBMC</summary>
+    <summary lang="el">Εισαγάγετε, αναζητήστε και εκτελέστε παιχνίδια στο XBMC.</summary>
+    <summary lang="en">Import, browse and launch games in XBMC</summary>
+    <summary lang="en_NZ">Import, browse and launch games in XBMC</summary>
+    <summary lang="es">Importa, explora y ejecuta juegos en XBMC</summary>
+    <summary lang="fr">Importez, parcourez et lancez vos jeux depuis XBMC</summary>
+    <summary lang="fr_CA">Importer, parcourir et lancer des jeux dans XBMC</summary>
+    <summary lang="gl">Importar, buscar e executar xogos no XBMC</summary>
+    <summary lang="hu">Konzol játék ROM-ok böngészése</summary>
+    <summary lang="id">Impor, telusuri dan mainkan permainan di XMBC</summary>
+    <summary lang="it">Importa, sfoglia e lancia i giochi da XBMC</summary>
+    <summary lang="nl">Importeer, doorzoek en start spellen in XBMC</summary>
+    <summary lang="pl">Importowanie, przeglądanie i uruchamianie gier w XBMC</summary>
+    <summary lang="pt">Importe, navegue e execute jogos no XBMC</summary>
+    <summary lang="pt_BR">Importe, navegue e execute jogos no XBMC</summary>
+    <summary lang="ru">Импорт, обзор и запуск игр в XBMC</summary>
+    <summary lang="sv">Importera, bläddra och starta spel i XBMC</summary>
+    <summary lang="zh">在 XBMC 中导入、浏览和运行游戏</summary>
+    <description lang="be">With this Addon you can browse and launch emulator roms and standalone games in XBMC. See the wiki page for more information: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&amp;#10;&amp;#10;First Use:&amp;#10;  * On first launch RCB will start a simple configuration wizard&amp;#10;  * After the wizard is completed RCB will ask you to import your games&amp;#10;  * If needed you can launch the wizard anytime via context menu&amp;#10;  * Just press "C" on your keyboard or "Menu" on your remote&amp;#10;&amp;#10;Features:&amp;#10;  * scan your rom folders and import games to local database&amp;#10;  * scrape artwork and meta data from various online sources&amp;#10;  * import local available descriptions, artwork and videos&amp;#10;  * filter games by console, genre, year and publisher&amp;#10;  * favorites function&amp;#10;  * automatic video playback in video window&amp;#10;  * fullscreen video browser&amp;#10;  * game details page&amp;#10;  * dedicated MAME views to display cabinets and marquees&amp;#10;  * launch roms and standalone games in solo or non-solo mode&amp;#10;  * detect games in zip and 7z archives and ask user which game to load&amp;#10;  * direct launching of savestate files&amp;#10;  * ...&amp;#10;</description>
+    <description lang="de">Mit diesem Addon können Roms und PC-Spiele verwaltet und gestartet werden. Mehr Informationen im RCB wiki: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&amp;#10;&amp;#10;Erste Schritte:&amp;#10;  * Beim ersten Aufruf startet RCB einen Konfigurations-Assistenten&amp;#10;  * Nach der Konfiguration importiert RCB die Spiele in seine Datenbank&amp;#10;  * Der Assistent kann auch jederzeit aus RCB heraus gestartet werden&amp;#10;  * Drücke dazu "C" auf der Tastatur oder "Menu" auf der Fernbedienung&amp;#10;&amp;#10;Features:&amp;#10;  * Scannt Verzeichnisse rekursiv und importiert Spiele in die Datenbank&amp;#10;  * Liest Artwork und Metadaten aus verschiedenen Online-Quellen&amp;#10;  * Importiert lokal verfügbare Infos, Artwork und Videos&amp;#10;  * Filtert Spiele nach Konsole, Genre, Jahr und Herausgeber&amp;#10;  * Favoriten-Funktion&amp;#10;  * Automatisches Abspielen von Videos&amp;#10;  * Fullscreen Video Browser&amp;#10;  * Detailseite mit weiteren Spiele-Infos&amp;#10;  * spezielle MAME Sichten für Cabinets und Banner&amp;#10;  * Startet Spiele im Solo-Modus (beendet XBMC vor dem Start des Spiels)&amp;#10;  * Erkennt Spiele in zip und 7z Archiven&amp;#10;  * Savestates können direkt gestartet werden (Emulator-abhängig)&amp;#10;  * ...&amp;#10;</description>
+    <description lang="el">Με αυτό το Πρόσθετο μπορείτε να βρείτε και να παίξετε παιχνίδια εξομοιωτών (Rom) καθώς και αυτόνομα παιχνίδια στο XBMC. Δείτε τη σελίδα του wiki για περισσότερες πληροφορίες: http://code.google.com/p/romcollectionbrowser/wiki/Welcome&amp;#10;&amp;#10;Πρώτη Χρήση:&amp;#10;  * Κατά την πρώτη εκτέλεση του RCB θα ξεκινήσει ένας οδηγός εγκατάστασης&amp;#10;  * Μετά την ολοκλήρωση του οδηγού το RCB θα σας ζητήσει να εισάγετε τα παιχνίδια σας&amp;#10;  * Αν χρειαστεί, μπορείτε να εκτελέσετε τον οδηγό ανά πάσα στιγμή από το μενού επιλογών&amp;#10;  * Απλά πιέστε το "C" στο πληκτρολόγιό σας ή το "Μενού" στο τηλεχειριστήριό σας&amp;#10;&amp;#10;Χαρακτηριστικά:&amp;#10;  * σαρώστε τους φακέλους των rom σας και εισάγετε παιχνίδια στην τοπική βάση δεδομένων&amp;#10;  * λήψη εικόνων και μετα-δεδομένων μέσω της διαδικασίας του scrape από διάφορες διαδικτυακές πηγές&amp;#10;  * εισαγωγή διαθέσιμων τοπικών περιγραφών, εικόνων και βίντεο&amp;#10;  * φιλτράρισμα παιχνιδιών ανά παιχνιδομηχανή, είδος, έτος και εταιρεία&amp;#10;  * λειτουργία αγαπημένων&amp;#10;  * αυτόματη αναπαραγωγή βίντεο σε παράθυρο&amp;#10;  * προβολή βίντεο πλήρους οθόνης&amp;#10;  * σελίδα πληροφοριών παιχνιδιών&amp;#10;  * εξειδικευμένες προβολές MAME για εμφάνιση cabinet και marquee&amp;#10;  * έναρξη rom και παιχνιδιών σε λειτουργία solo και μη&amp;#10;  * εντοπισμός παιχνιδιών σε αρχεία zip και 7z και ερώτηση χρήστη σχετικά με το ποιο παιχνίδι να φορτωθεί&amp;#10;  * άμεση έναρξη των αποθηκευμένων αρχείων&amp;#10;  * ...&amp;#10;</description>
+    <description lang="en">With this Addon you can browse and launch emulator roms and standalone games in XBMC. See the wiki page for more information: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&amp;#10;&amp;#10;First Use:&amp;#10;  * On first launch RCB will start a simple configuration wizard&amp;#10;  * After the wizard is completed RCB will ask you to import your games&amp;#10;  * If needed you can launch the wizard anytime via context menu&amp;#10;  * Just press "C" on your keyboard or "Menu" on your remote&amp;#10;&amp;#10;Features:&amp;#10;  * scan your rom folders and import games to local database&amp;#10;  * scrape artwork and meta data from various online sources&amp;#10;  * import local available descriptions, artwork and videos&amp;#10;  * filter games by console, genre, year and publisher&amp;#10;  * favorites function&amp;#10;  * automatic video playback in video window&amp;#10;  * fullscreen video browser&amp;#10;  * game details page&amp;#10;  * dedicated MAME views to display cabinets and marquees&amp;#10;  * launch roms and standalone games in solo or non-solo mode&amp;#10;  * detect games in zip and 7z archives and ask user which game to load&amp;#10;  * direct launching of savestate files&amp;#10;  * ...&amp;#10;</description>
+    <description lang="en_NZ">With this Addon you can browse and launch emulator roms and standalone games in XBMC. See the wiki page for more information: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&amp;#10;&amp;#10;First Use:&amp;#10;  * On first launch RCB will start a simple configuration wizard&amp;#10;  * After the wizard is completed RCB will ask you to import your games&amp;#10;  * If needed you can launch the wizard anytime via context menu&amp;#10;  * Just press "C" on your keyboard or "Menu" on your remote&amp;#10;&amp;#10;Features:&amp;#10;  * scan your rom folders and import games to local database&amp;#10;  * scrape artwork and meta data from various online sources&amp;#10;  * import local available descriptions, artwork and videos&amp;#10;  * filter games by console, genre, year and publisher&amp;#10;  * favourites function&amp;#10;  * automatic video playback in video window&amp;#10;  * fullscreen video browser&amp;#10;  * game details page&amp;#10;  * dedicated MAME views to display cabinets and marquees&amp;#10;  * launch roms and standalone games in solo or non-solo mode&amp;#10;  * detect games in zip and 7z archives and ask user which game to load&amp;#10;  * direct launching of savestate files&amp;#10;  * ...&amp;#10;</description>
+    <description lang="es">Con este complemento puedes explorar y ejecutar ROMs de emulador y juegos independientes en XBMC. Visita la página wiki para más información: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&amp;#10;&amp;#10;Primer Uso:&amp;#10;  * Al ejecutarse por primera vez, RCB mostrará un sencillo asistente de configuración&amp;#10;  * Una vez completado el asistente, RCB te solicitará importar tus juegos&amp;#10;  * Si lo necesitas, puedes ejecutar el asistente en cualquier momento a través del menú contextual&amp;#10;  * Tan solo tienes que pulsar "C" en el teclado o "Menú" en el mando a distancia&amp;#10;&amp;#10;Características:&amp;#10;  * escanea tus carpetas con ROMs e importa los juegos a una base de datos local&amp;#10;  * descarga imágenes y metadatos desde varias fuentes online&amp;#10;  * importa descripciones, imágenes y videos disponibles localmente&amp;#10;  * filtra los juegos por consola, género, año y editor&amp;#10;  * función de favoritos&amp;#10;  * reproducción automática de videos en ventana de video&amp;#10;  * navegador de videos a pantalla completa&amp;#10;  * página de detalles del juego&amp;#10;  * vistas de MAME dedicadas, mostrando máquinas y marcos&amp;#10;  * ejecuta ROMs y juegos independiente en modo solo o no-solo&amp;#10;  * detecta juegos en archivos zip y 7z y pregunta al usuario qué juego desea cargar&amp;#10;  * ejecución directa de archivos de partidas guardadas&amp;#10;  * ...&amp;#10;</description>
+    <description lang="fr">Avec cette extension, vous pouvez parcourir et lancer des roms d'émulateur ainsi que des jeux autonomes. Visitez le wiki pour plus d'informations : http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&amp;#10;Première utilisation :&amp;#10;* Au premier démarrage RCB lancera un assistant de configuration simplifié.&amp;#10;* Une fois cette configuration terminée RCB vous proposera d'importer vos jeux.&amp;#10;* Au besoin, vous pouvez relancer l'assistant de configuration à tout moment depuis le menu contextuel.&amp;#10;* Appuyez sur la touche "C" de votre clavier ou sur "Menu" de votre télécommande.&amp;#10;&amp;#10;Caractéristiques :&amp;#10;* Analyse votre dossier de roms et importe les jeux dans une base de données locale&amp;#10;* Récupère les illustrations et métadonnées depuis différentes sources en ligne&amp;#10;* Importe vos descriptifs, illustrations et vidéos stockés localement&amp;#10;* Filtre vos jeux par console, genre, année et éditeur&amp;#10;* Gestion des favoris&amp;#10;* lecture automatique des vidéos dans une fenêtre&amp;#10;* Navigation parmi les vidéos en plein écran&amp;#10;* Fiche de jeux détaillée&amp;#10;* Vues dédiées pour MAME affichant cabinets et marquees&amp;#10;* Lancement des roms et jeux en mode solo ou non&amp;#10;* Détecte les jeux dans les fichiers zip et 7z et demande à l'utilisateur quel jeux lancer&amp;#10;* lance directement une sauvegarde&amp;#10;&amp;#10;</description>
+    <description lang="fr_CA">Avec cet addiciel vous pouvez parcourir et lancer des roms d'émulateurs et des jeux autonomes dans XBMC. Consulter le wiki pour plus d'informations : http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&amp;#10;&amp;#10;Première utilisation :&amp;#10;* au premier lancement RCB lancera un assistant simple de configuration&amp;#10;* un fois l'assistant terminé RCB vous demandera d'importer vos jeux&amp;#10;* au besoin vous pouvez lancer l'assistant à tout moment avec le menu contextuel&amp;#10;* pesez juste sur « C » sur votre clavier, ou « Menu » sur votre télécommande&amp;#10;&amp;#10;Caractéristiques :&amp;#10;* balayer votre dossier de ROM et importer les jeux dans la base de données locale&amp;#10;* extraire les illustrations et les métadonnées de diverses sources en ligne&amp;#10;* importer les descriptions, les illustrations et les vidéos locales disponibles&amp;#10;* filtrer les jeux par console, genre, année et éditeur&amp;#10;* fonction favoris&amp;#10;* lecture vidéo automatique dans la fenêtre vidéo&amp;#10;* navigateur vidéo en plein écran&amp;#10;* page de détails des jeux&amp;#10;* vues MAME dédiées pour afficher les cabinets et les marquises&amp;#10;* lancer les ROM et les jeux autonomes en mode solo ou non&amp;#10;* détecter les jeux dans les archives zip et 7z et demander à l'utilisateur quel jeu charger&amp;#10;* lancement direct des fichiers de sauvegarde d'état&amp;#10;* ... &amp;#10;</description>
+    <description lang="hu">Jelenlegi funkciók:&amp;#10;  * játékok szűrése konzoltípus, műfaj, év és kiadó alapján&amp;#10;  * rom-ok indítása külső emulátorral&amp;#10;  * a program beállítása egy xml fájl segítségével&amp;#10;  * egyszerű de testreszabható leírófájl-feldolgozó&amp;#10;  * játékonként különböző képek és videók megjelenítése&amp;#10;  * játéktartalom és kiegészítő információk megjelenítése&amp;#10;</description>
+    <description lang="id">Dengan Addon ini Anda dapat menelusuri dan menjalankan rom emulator dan program permainan di XBMC. Lihat halaman wiki untuk informasi lebih lanjut: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&amp;#10;&amp;#10;Pemakaian Pertama:&amp;#10;* Saat pertama kali menjalankan RCB akan memulai penuntun konfigurasi sederhana&amp;#10;* Setelah tuntunan selesai RCB akan menanyakan Anda untuk mengimpor permainan&amp;#10;* Jika diperlukan Anda dapat menjalankan tuntunan kapan saja melalui menu konteks&amp;#10;* Tekan "C" pada papan ketik atau "Menu" pada remote Anda&amp;#10;&amp;#10;Fitur:&amp;#10;* pindai folder rom Anda dan impor permainan ke basis data lokal&amp;#10;* salin karya seni dan meta data dari berbagai sumber daring&amp;#10;* impor deskripsi, karya seni dan video yang tersedia lokal&amp;#10;* filter permainan berdasarkan konsol, tema, tahun dan penerbit&amp;#10;* fungsi favorit&amp;#10;* pemaran video otomatis di jendela video&amp;#10;* Penelusuran video layar penuh&amp;#10;* halaman rincian permainan&amp;#10;* tampilan MAME dedikasi untuk menampilkan kabinet dan marquee&amp;#10;* deteksi permainan dalam arsip zip dan 7z serta menanyakan pengguna permainan mana yang akan dimuat&amp;#10;* menjalankan langsung dari berkas savestate&amp;#10;* ...&amp;#10;</description>
+    <description lang="it">Con questo addon puoi sfogliare e lanciare le rom degli emulatori o giochi standalone in XBMC. Consulta la pagina wiki per maggiori informazioni : http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&amp;#10;&amp;#10;Prima uso:&amp;#10;  * Al primo avvio, RCB avvia una semplice procedura di configurazione&amp;#10;  * Al termine, RCB ti chiederà di importare i tuoi giochi&amp;#10;  * Se necessario, puoi avviare la procedura di configurazione in qualsiasi momento tramite il menu contestuale&amp;#10;  * Premi semplicemente "C" sulla tua tastiera o il tasto "Menu" del tuo telecomando&amp;#10;&amp;#10;Caratteristiche:&amp;#10;  * Scansiona le tue cartelle contenenti rom e importa i giochi in un database locale&amp;#10;  * Esegui lo scraping degli artwork e dei metadati da varie sorgenti online&amp;#10;  * Importa descrizioni, artwork e video già disponibili in locale&amp;#10;  * Filtra i giochi per console, genere, anno e editore&amp;#10;  * Funzione preferiti &amp;#10;  * Esecuzione automatica dei video nella finestra video&amp;#10;  * Sfoglia video a schermo intero&amp;#10;  * Pagina dettagli del gioco&amp;#10;  * Viste specifiche per MAME per visualizzare i cabinet e i marquee&amp;#10;  * Lancia rom e giochi standalone in modalità "Solo" e "Non solo"&amp;#10;  * Rileva giochi in archivi .zip e .7z, e chiede all'utente quale gioco eseguire&amp;#10;  * Lancio diretto da file di salvataggio del gioco&amp;#10;  * ...&amp;#10;</description>
+    <description lang="nl">Met deze Add-on kan je zoeken en starten van emulator roms en alleenstaande Spellen in XBMC. Zie de wikipagina voor meer informatie:&amp;#10;http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&amp;#10;&amp;#10;Bij eerste keer:&amp;#10;* Bij de eerste keer Starten zal RCB een gemakkelijke configuratie wizard starten&amp;#10;* Nadat de wizard gereed is zal RCB jou vragen jouw spellen te importeren&amp;#10;* wanneer nodig kan je de wizard elke keer starten via het context menu&amp;#10;* Druk alleen "C" op je toetsenbord of "menu"op jouw afstandsbediening&amp;#10;&amp;#10;Functies:&amp;#10;* Scan jouw rom folders en importeer spellen naar jou lokale database&amp;#10;* scrape Artwork en Meta data van uit verschillende online bronnen&amp;#10;* importeer lokaal beschikbare omschrijvingen, artwork en video`s&amp;#10;* Filter spellen op Console, genre, jaar en uitgever&amp;#10;* Favorieten functie&amp;#10;* Automatisch film terugspelen optie in videoscherm&amp;#10;* Volledig scherm Video browser&amp;#10;* Spel details pagina&amp;#10;* Toegewijde MAME weergaven om Cabinets en marquees*&amp;#10;* Start Roms en Alleenstaande spellen in Solo of niet-solo modus&amp;#10;* detecteer spellen in zip en 7z archieven en vraag gebruiker welk spel te laden&amp;#10;* direct starten van opgeslagen bestanden&amp;#10;* ...&amp;#10;&amp;#10;</description>
+    <description lang="pt">Com este Addon pode navegar e jogar roms de emuladores e jogos individuais no seu XBMC. Veja a página de wiki para mais informação: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&amp;#10;&amp;#10;Primeiro uso:&amp;#10;  * Na primeira execução, RCB iniciará um assistente de configuração&amp;#10;  * Após a configuraçã estar completa, o RCB irá importar os seus jogos&amp;#10;  * Se precisar, pode iniciar o assistente através do menu de contexto&amp;#10;  * Basta premir "C" no seu teclado ou "Menu" no seu remoto&amp;#10;&amp;#10;Funcionalidades:&amp;#10;  * analisar as suas pastas de roms e importar jogos para a base de dados local&amp;#10;  * obter artwork e metadados de várias fontes online&amp;#10;  * importar descrições, artwork e vídeos disponíveis localmente&amp;#10;  * filtrar jogos por consola, género, ano e editora&amp;#10;  * função de favoritos&amp;#10;  * reprodução de vídeo automática na janela de vídeo&amp;#10;  * navegador de vídeos em ecrã cheio&amp;#10;  * página de detalhes do jogo&amp;#10;  * vistas especiais de MAME para exibir cabinets e marquees&amp;#10;  * iniciar roms e jogos autónomos em modo solo ou não-solo&amp;#10;  * detectar jogos em ficheiros zip e 7z e perguntar ao utilizador qual é o jogo a iniciar&amp;#10;  * iniciar directamente ficheiros de savestate&amp;#10;  * ...&amp;#10;</description>
+    <description lang="pt_BR">Com esse addon você pode navegar e lançar roms de emuladores e jogos através do xbmc. Veja a pagina de wiki para mais informações:&amp;#10;http://code.google.com/p/romcollectionbrowser/wiki/Welcome.(\n)(\n)&amp;#10;Primeiro Uso:&amp;#10; No primeiro lançamento o RCB irá iniciar um assistente de configuração simples(&amp;#10;*Depois de concluir o assistente RCB irá pedir para importar seus jogos&amp;#10;*Se necessário, você pode iniciar o assistente a qualquer momento através do menu de contexto&amp;#10;* Basta pressionar "C" no seu teclado ou "Menu" em seu controle remoto&amp;#10;&amp;#10;Características:&amp;#10;* varredura de suas pastas com roms e importação de jogos para um banco de dados local&amp;#10;* procura arte e meta-dados de várias fontes on-line&amp;#10;* importação local para descrições e obras de arte e vídeos se disponíveis&amp;#10;* filtrar jogos por console, gênero, ano e editor&amp;#10;* função favoritos&amp;#10;* reprodução automática de videos na janela do navegador(\n)&amp;#10;*vídeo em tela cheia no navegador&amp;#10;* pagina de detalhes do jogo&amp;#10;* vistas dedicadas a MAME para exibir cabines e letreiros(\n)&amp;#10;* lançamento de roms e jogos independentes no modo sozinho ou não sozinho&amp;#10;* detectar jogos em arquivos ZIP e 7z e perguntar ao usuário qual jogo carregar&amp;#10;* lançamento direto de arquivos de savestate&amp;#10;.&amp;#10;</description>
+    <description lang="ru">С помощью этого дополнения можно просматривать и запускать ROM эмуляторы и игры XBMC. Дополнительную информацию можно увидеть на странице Wiki по адресу: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&amp;#10;&amp;#10;Первый запуск:&amp;#10;  * При первом запуске RCB будет запущен простой мастер конфигураций&amp;#10;  * После завершения мастера RCB спросит Вас, какие игры импортировать&amp;#10;  * Если нужно, вы можете запустить мастер повторно в контекстном меню&amp;#10;  * Нажмите "C" на клавиатуре или "Menu" на пульте управления&amp;#10;&amp;#10;Возможности:&amp;#10;  * Сканирование папок с образами игр и добавление их в вашу базу данных&amp;#10;  * Искать обложки и мета данные  с различных онлайн источников&amp;#10;  * загружать доступные локальные описания, обложки и видео&amp;#10;  * фильтровать игры по типу консоли, жанру, году, издателю&amp;#10;  * избранное&amp;#10;  * автоматическое воспроизведение видео в окне&amp;#10;  * полноэкранный видео браузер&amp;#10;  * страница описаний игр&amp;#10;  * dedicated MAME views to display cabinets and marquees&amp;#10;  * Запускать образы и игры в одно и многопользовательском режимах&amp;#10;  * определять игры в архивах zip и 7z и затем спрашивать пользователя, что загружать&amp;#10;  * Прямой запуск по файлам сохранений&amp;#10;  * ...&amp;#10;</description>
+    <description lang="sv">Med detta tillägg kan du bläddra och starta emulatorbaserade ROMS och spel i XBMC.&amp;#10;Se wiki för mer information: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&amp;#10;&amp;#10;Första start:&amp;#10;  * Vid första start kommer RCB starta en enkel inställningsguide&amp;#10;  * När guiden är klar kommer RCB be dig importera dina spel&amp;#10;  * Om du behöver, kan du starta guiden när som helst via undermenyn&amp;#10;  * Tryck "C" på ditt tangentbord eller "Meny" på din fjärrkontroll&amp;#10;&amp;#10;Egenskaper:&amp;#10;  * sök igenom mappar med roms och importera spel till lokal databas&amp;#10;  * skrapa bilder och metadata från olika onlinekällor&amp;#10;  * importera lokala beskrivningar, bilder och filmer&amp;#10;  * filtrera spel efter konsol, genre, år och utgivare&amp;#10;  * favoriter&amp;#10;  * automatisk filmuppspelning i videofönster&amp;#10;  * fullskärmsbläddrare för film&amp;#10;  * sida med detaljerad spelinformation&amp;#10;  * dedikerade MAME-vyer för att visa spelkabinett&amp;#10;  * starta roms och spel i solo eller non-solo läge&amp;#10;  * hitta spel i zip och 7z arkiv och fråga användaren vilket spel att ladda&amp;#10;  * direktstart av savestate fier&amp;#10;  * ...&amp;#10;</description>
+    <language></language>
+    <platform>android freebsd ios linux osx windows</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>forum.kodi.tv/showthread.php?tid=70115</forum>
+    <website>https://github.com/maloep/romcollectionbrowser</website>
+    <source>https://github.com/maloep/romcollectionbrowser</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.image.resource.select" name="Image Resource Select Addon" version="2.0.4" provider-name="ronie">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+	</requires>
+	<extension point="xbmc.python.library" library="default.py"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Image resource selection addon</summary>
+		<description lang="en_GB">Script for skinners to let users select an image resource addon.</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=239558</forum>
+		<source>https://gitlab.com/ronie/script.image.resource.select</source>
+	</extension>
+</addon>
+
+<addon id="service.eventghost.updater"
+       name="EventGhost Updater"
+       version="1.0.5"
+       provider-name="luiselopez21">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.service" library="resources/lib/service.py" />
+  <extension point="xbmc.addon.metadata">
+	<news>1.0.5 - Major changes.</news>
+      <summary>EventGhost updater</summary>
+      <description>Updating eventghost files easily.</description>
+      <platform>all</platform>
+      <assets>
+          <icon>icon.png</icon>
+          <fanart>fanart.jpg</fanart>
+      </assets>
+  </extension>
+</addon>
+
+<addon id="service.sleeptimer"
+       name="Sleep Timer"
+      version="2.0.7"
+      provider-name="enen92, Solo0815">
+    <requires>
+		<import addon="xbmc.addon" version="14.0.0"/>
+		<import addon="xbmc.python" version="2.19.0"/>
+    </requires>
+    <extension point="xbmc.service" library="service.py" start="login"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Did you fall asleep? Get better control over media playback </summary>
+        <summary lang="pt">Adormeceu? Tenha melhor controlo sobre a reproduÃ§Ã£o de media </summary>
+         <description lang="en">This service addon makes Kodi stop any playback if it exceeds a given playback time. If you have that awful habit of leaving Kodi playing live content after you fell asleep, this addon is for you! It gives extended control over the playback time. Step mute the audio, enable the screensaver or run a custom command after the playback is stopped.</description>
+         <description lang="pt">Este service addon faz com que o Kodi pare qualquer playback se o seu tempo exceder um valor fornecido. Se tiver o hÃ¡bito de adormecer enquanto o Kodi estÃ¡ a reproduzir conteÃºdo multimÃ©dia, este addon Ã© para si! Este extende o controlo do tempo de reproduÃ§Ã£o. Baixe o volume do Ã¡udio, active o protector de ecrÃ£ ou execute um comando customizado apÃ³s a reproduÃ§Ã£o ser interrompida.</description>
+         <forum>http://forum.kodi.tv/showthread.php?tid=211971</forum>
+    	    <source>https://github.com/enen92/service.sleeptimer</source>
+         <platform>all</platform>
+         <license>GPL-2.0-only</license>
+    </extension>
+</addon>
+
+<addon id="service.upnext" name="Up Next" version="1.1.5" provider-name="im85288">
+    <requires>
+        <import addon="xbmc.python" version="2.25.0"/>
+    </requires>
+    <!-- This is needed to get an addon icon -->
+    <extension point="xbmc.python.script" library="resources/lib/script_entry.py">
+      <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="resources/lib/service_entry.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Propose to play the next episode automatically</summary>
+        <description lang="en_GB">A service add-on that shows a Netflix-style notification for watching the next episode. After a few automatic iterations it asks the user if he is still there watching.
+
+A lot of existing add-ons already integrate with this service out-of-the-box.</description>
+        <summary lang="de_DE">Bietet Ihnen an, die nächste Episode automatisch wiederzugeben</summary>
+        <description lang="de_DE">Ein kleines Hilfs-Add-on, welches eine Netflix-artige Benachrichtigung zur Wiedergabe der nächsten Episode anzeigt. Nach ein paar automatischen Iterationen fragt es den Anwender, ob er sie immer noch anschaut.
+
+Viele existierende Add-ons haben diesen Dienst bereits von Haus aus integriert.</description>
+        <summary lang="it_IT">Propone di riprodurre automaticamente il prossimo episodio</summary>
+        <description lang="it_IT">Un add-on di servizio che mostra una notifica in stile Netflix per guardare il prossimo episodio. Dopo alcune iterazioni automatiche, chiede all'utente se è ancora lì a guardare.
+
+Molti add-on esistenti hanno già integrato questo servizio.</description>
+        <summary lang="el_GR">Προτάση για αναπαραγωγή του επόμενου επεισοδίου αυτόματα</summary>
+        <description lang="el_GR">Ένα υπηρεσιακό πρόσθετο που δείχνει σε στύλ ειδοποίησης τύπου Νέτφλιξ για την αναπαραγωγή του επόμενου επεισοδίου. Μετά από μερικές αυτόματες εκτελέσεις, ρωτάει τον χρήστη εάν παρακολουθεί ακόμα.
+
+Πολλά από τα υπάρχοντα πρόσθετα ενσωματώνουν την λειτουργία αυτού του υπηρεσιακού προσθέτου εξ'ορισμού.</description>
+        <summary lang="sv_SE">Låter dig spela upp nästa avsnitt automatiskt</summary>
+        <description lang="sv_SE">Ett tillägg som visar en Netflix-liknande avisering för att se nästa avsnitt. Efter att några avsnitt automatiskt spelats upp frågar den användaren om han fortfarande är där och vill titta vidare.
+
+Många befintliga tillägg integreras redan med den här utanför lådan-tjänsten.</description>
+         <summary lang="ru_RU">Предлагает автоматически проиграть следующую серию</summary>
+        <description lang="ru_RU">Сервисное дополнение, которое показывает уведомление в стиле Netflix для просмотра следующей серии. После нескольких автоматических итераций спрашивает пользователя, он еще смотрит или нет.
+
+Многие существующие дополнения уже интегрированы с этим сервисом "из коробки".</description>
+        <summary lang="es_ES">Sugiere reproducir el próximo episodio automáticamente</summary>
+        <description lang="es_ES">Un complemento de servicio que muestra una notificación al estilo Netflix para ver el próximo episodio. Después de algunas iteraciones automáticas, le pregunta al usuario si todavía está allí mirando.
+
+            Muchos complementos existentes ya se integran con este servicio listo para usar.</description>
+        <platform>all</platform>
+        <license>GPL-2.0-only</license>
+        <news>
+v1.1.5 (2021-02-21)
+- Fix playlists to work with non-library content
+- Fix to prevent unwanted playback when using playlist queueing method
+- New translation for Finnish
+
+v1.1.4 (2020-12-03)
+- Fix problem causing pop-up to not appear
+- Translation updates to Romanian, Russian and Spanish
+
+v1.1.3 (2020-10-14)
+- Enable customPlayTime by default
+- Do not seek to the end before playing next episode
+- Add Kodi v17 compatibility
+- Fix logging on Kodi v19 (Matrix) after recent breakage
+- Enqueue the next episode in the playlist
+- Translation updates to German
+
+v1.1.2 (2020-06-22)
+- Bug fix for change from sleep to waitForAbort using seconds and not ms
+- Translation updates to Japanese and Korean
+
+v1.1.1 (2020-06-21)
+- Avoid conflict with external players
+- Restore "Ignore Playlist" option
+- Fix a known Kodi bug related to displaying hours
+- Improvements to endtime visualization
+- New translations for Hindi and Romanian
+- Translation updates to Hungarian and Spanish
+
+v1.1.0 (2020-01-17)
+- Add notification_offset for Netflix add-on
+- Fix various runtime exceptions
+- Implement new settings
+- Implement new developer mode
+- Show current time and next endtime in notification
+- New translations for Brazilian, Czech, Greek, Japanese, Korean
+- New translations for Russian, Slovak, Spanish, Swedish
+- Translation updates to Croatian, French, German, Hungarian, Italian, Polish
+        </news>
+        <assets>
+            <icon>resources/media/icon.png</icon>
+            <fanart>resources/media/fanart.jpg</fanart>
+            <screenshot>resources/media/screenshot01.jpg</screenshot>
+            <screenshot>resources/media/screenshot02.jpg</screenshot>
+            <screenshot>resources/media/upnext-settings.jpg</screenshot>
+            <screenshot>resources/media/upnext-developer.jpg</screenshot>
+        </assets>
+    </extension>
+</addon>
+
+<addon
+  id="visualization.milkdrop2"
+  version="2.1.4"
+  name="MilkDrop 2"
+  provider-name="Ryan Geiss, ported by MrC, DX11 by afedchin">
+  <requires>
+<import addon="kodi.binary.global.main" version="1.0.14"/>
+<import addon="kodi.binary.instance.visualization" version="2.0.1"/></requires>
+  <extension
+    point="xbmc.player.musicviz"
+    library_windows="visualization.milkdrop2.dll"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="af">MilkDrop laat jou sweef deur die klankgolwe wat jy hoor</summary>
+    <summary lang="ar">يحلق بك MilkDrop فوق الموجات الصوتية اللتي تسمع</summary>
+    <summary lang="be">MilkDrop takes you flying through the soundwaves you're hearing</summary>
+    <summary lang="bg">"MilkDrop" ще Ви отведе на пътешествие между звуковите вълни, които чувате</summary>
+    <summary lang="ca">MilkDrop et porta volant a través de les ones de so que escoltes</summary>
+    <summary lang="cs">MilkDrop s Vámi proletí skrz zvukové vlny, které slyšíte</summary>
+    <summary lang="cy">Mae MilkDrop yn eich hedeg drwy'r tannau sain rydych yn eu clywed</summary>
+    <summary lang="da">Milkdrop tager dig på en flyvetur gennem lydbølgerne, du lytter til</summary>
+    <summary lang="de">MilkDrop nimmt dich mit auf einen Flug durch deine Musik.</summary>
+    <summary lang="el">Το MilkDrop σας ταξιδεύει μέσα στα ηχητικά κύματα που ακούτε</summary>
+    <summary lang="en">MilkDrop takes you flying through the soundwaves you're hearing</summary>
+    <summary lang="en_US">MilkDrop takes you flying through the soundwaves you're hearing</summary>
+    <summary lang="es">MilkDrop te lleva volando a través de las ondas que estás escuchando</summary>
+    <summary lang="es_AR">MilkDrop te lleva volando a través de las ondas que estás escuchando</summary>
+    <summary lang="es_MX">MilkDrop the lleva volando a través de las ondas de sonido que estás escuchando</summary>
+    <summary lang="et">MilkDrop viib sind lennates läbi kullatavate helilainete</summary>
+    <summary lang="fi">MilkDrop lennättää sinut ääniaaltojen läpi</summary>
+    <summary lang="fr">MilkDrop vous fait voyager dans les ondes sonores de votre musique</summary>
+    <summary lang="fr_CA">MilkDrop vous fait voyager dans les ondes sonores de votre musique</summary>
+    <summary lang="gl">MilkDrop lévate voando a través da ondas de son que esta a ouvir</summary>
+    <summary lang="he">MilkDrop לוקח אותך לתעופה דרך גלי הסאונד שאתה שומע</summary>
+    <summary lang="hr">MilkDrop vam omogućuje let kroz zvuk koji čujete</summary>
+    <summary lang="hu">A Milkdrop végigrepít a zene hullámain</summary>
+    <summary lang="is">Með MilkDrop flýgurðu í gegnum hljóðbylgjurnar sem þú heyrir</summary>
+    <summary lang="it">MilkDrop ti fa volare tra le onde sonore di ciò che stai ascoltando</summary>
+    <summary lang="ja">MilkDrop - 音楽の波の上を飛ぶ</summary>
+    <summary lang="ko">MilkDrop은 사운드웨이브 속으로 날아가는듯한 효과를 보여줍니다.</summary>
+    <summary lang="lt">MilkDrop nukelia Jus i nuostabu skrydi virs debesu, istiesu fantastisku garsu gausa</summary>
+    <summary lang="lv">MilkDrop paņem Jūs līdzi lidojumā cauri skaņu viļņiem, kurus dzirdat</summary>
+    <summary lang="mk">MilkDrop ве прелетува преку брановите на музиката која ја слушате</summary>
+    <summary lang="nl">Met MilkDrop vliegt u mee door de soundwaves die je hoort</summary>
+    <summary lang="no">MilkDrop tar deg med på en flyreise gjennom lydbølgene du hører</summary>
+    <summary lang="pl">MilkDrop zabiera Cię w niesamowity lot w chmurach aktualnie słuchanych dźwięków</summary>
+    <summary lang="pt">O MilkDrop leva-o num voo através das ondas sonoras que está a ouvir</summary>
+    <summary lang="pt_BR">O MilkDrop leva você para voar nas ondas sonoras que está ouvindo</summary>
+    <summary lang="ro">MilkDrop vă face să zburați printre undele audio pe care le auziți</summary>
+    <summary lang="ru">Milkdrop отправит вас в полёт через звуковые волны, которые вы слышите</summary>
+    <summary lang="sk">MilkDrop s Vami poletí zvukovými vlnami, ktoré počúvate</summary>
+    <summary lang="sl">MilkDrop vas popelje skozi zvočne valove, ki jih poslušate</summary>
+    <summary lang="sq">MilkDrop të bën të fluturosh nëpër valet të tingullit që e dëgjonë</summary>
+    <summary lang="sv">Milkdrop för dig flygande genom de ljudvågor du hör.</summary>
+    <summary lang="ta_IN">MilkDrop நீங்கள் கேட்கும் ஒலி அலைகளின் வடிவங்களின் மூலம் பறக்க செய்யும்</summary>
+    <summary lang="tg">MilkDrop бо мавҷҳои садояш фораму роҳатбахш аст</summary>
+    <summary lang="th">MilkDrop นำคุณโบยบิน ผ่านคลื่นเสียงที่คุณกำลังรับฟัง</summary>
+    <summary lang="tr">MilkDrop sizi duymakta olduğunuz ses dalgalarının içine çeker</summary>
+    <summary lang="uk">MilkDrop забере вас в політ крізь хвилі музики яку ви слухаєте</summary>
+    <summary lang="vi">MilkDrop giúp bạn bay bổng trong âm thanh bạn đang nghe</summary>
+    <summary lang="zh">MilkDrop 带你与声波一起飞翔</summary>
+    <summary lang="zh_TW">MilkDrop帶您穿越聆聽中的音樂饗宴</summary>
+    <description lang="af">MilkDrop was oorspronklik 'n musiek visualisering "plug-in" vir die Winamp musiek speler. Soos jy na jou musiek luister, laat MilkDrop jou deur die klankgolwe sweef wat jy hoor, en gebruik klop waarnemings om 'n magdom psigedeliese effekte te aktiveer, en 'n visuele reis deur klank te skep.</description>
+    <description lang="ar">ميلك دروب كان أصلا عارض موسيقى لمشغل الموسيقى وين امب. عندما تستمع لموسيقاك, كيلك دروب يطير بك خلال موجات صوتية تسمعا حيقيةً, ,و يستخدم كشف الوقع الموسيقي ليؤدي إلى تأثيرات كثيرة, منشئاً رجلة صوت مرئية قيمة.</description>
+    <description lang="be">MilkDrop was originally a music visualizer "plug-in" to the Winamp music player. As you listen to your music, MilkDrop takes you flying through the actual soundwaves you're hearing, and uses beat detection to trigger myriad psychedelic effects, creating a rich visual journey through sound.</description>
+    <description lang="bg">Първоначално "MilkDrop" е замислена като приставка за музикалния плеър Winamp. Докато слушате музикалната си колекция "MilkDrop" ще Ви накара да "полетите", измежду звуковите вълни, които чувате. Ползва ритъма за да създаде безброй еуфорични ефекти. Така създава едно богато визуално пътешествие в звука.</description>
+    <description lang="ca">El MilkDrop era originalment un afegitó de visualització musical pel reproductor Winamp. Mentre escoltes la música MilkDrop et porta volant a través de les ones de so que estàs escoltant al moment, i utilitza detecció de tempo per activar una munió d'efectes psicodèlics i crea un enriquidor viatge visual a través del so.</description>
+    <description lang="cs">MikDrop bylo původně vizualizační rozšíření pro přehrávač hudby Winamp. Při poslechu vaší hudby s Vámi MikDrop prolétá skrze zvukové vlny, které slyšíte, a používá detekci taktů, pro spuštění spousty psychedelických efektů, vytvářejíce tak zajímavou vizuální cestu skrze zvuk.</description>
+    <description lang="cy">Roedd MilkDrop yn wreiddiol yn "ategyn" delweddu cerddoriaeth ar gyfer Winamp. Wrth i chi wrando ar MilkDrop mae MilkDrop yn eich hedeg drwy'r tonnau sain rydych yn eu clywed gan ddefnyddio canfodydd trawiad i gychwyn effeithiau seicadelig amrywiol gan greu taith weledol cyfoethog drwy'r sain.</description>
+    <description lang="da">Milkdrop var oprindeligt et musikvisualisering "plug-in" til Winamp musikafspilleren. Mens du lytter til din musik, tager Milkdrop dig på en flyvetur gennem de faktiske lydbølger du hører og bruger beat-genkendelse til at udløse en myriade af psykedeliske effekter, der skaber en visuel rejse gennem lyd.</description>
+    <description lang="de">MilkDrop war ursprünglich ein Musik-Visualizer "Plug-in" für den Musik-Player Winamp.Wenn Sie Ihre Musik hören, fliegen Sie mit MilkDrop durch die aktuellen Klangwellen die Sie hören. Und die Beat-Erkennung wird genutzt um unzählige psychedelische Effekte auslösen, die Schaffung einer visuellen Reise durch den Klang.</description>
+    <description lang="el">Το MilkDrop ήταν αρχικά ένα "plug-in" μουσικών οπτικοποιήσεων του Winamp. Καθώς παίζετε τη μουσική σας, το MilkDrop σας ταξιδεύει μέσα στα πραγματικά ηχητικά κύματα που ακούτε, και χρησιμοποιεί ανίχνευση ρυθμού για να ενεργοποιήσει ένα πλήθος ψυχεδελικών εφέ, δημιουργώντας ένα πλούσιο οπτικό ταξίδι μέσα στον ήχο.</description>
+    <description lang="en">MilkDrop was originally a music visualiser "plug-in" to the Winamp music player. As you listen to your music, MilkDrop takes you flying through the actual soundwaves you're hearing, and uses beat detection to trigger myriad psychedelic effects, creating a rich visual journey through sound.</description>
+    <description lang="en_US">MilkDrop was originally a music visualizer "plug-in" to the Winamp music player. As you listen to your music, MilkDrop takes you flying through the actual soundwaves you're hearing, and uses beat detection to trigger myriad psychedelic effects, creating a rich visual journey through sound.</description>
+    <description lang="es">MilkDrop era originalmente un plug-in visualizador de música para Winamp. Mientras escuchas música, MilkDrop te lleva volando a través de las ondas que estás escuchando, y utiliza la detección del ritmo para activar una gran cantidad de efectos psicodélicos, creando una rica experiencia visual a través del sonido.</description>
+    <description lang="es_AR">MilkDrop era originalmente un plug-in visualizador de música para Winamp. Mientras escuchas música, MilkDrop te lleva volando a través de las ondas que estás escuchando, y utiliza la detección del ritmo para activar una gran cantidad de efectos psicodélicos, creando una rica experiencia visual a través del sonido.</description>
+    <description lang="es_MX">MilkDrop originalmente fue un "plug-in" visualizador de música para el reproductor de música Winamp. Mientras escuchas tu músuca, MilkDrop te lleva volando a través de las ondas de sonido que estás escuchando en ese momento, y usa detección de ritmo para desencadenar múltiples efectos psicodélicos, creando un rico recorrido visual a través del sonido.</description>
+    <description lang="et">MilkDrop oli algselt muusika visuaal plugin Winamp'ile. Muusikat kuulates viib MilkDrop sind lennates läbi kuulatavate helilainete. MilkDrop kasutab rütmituvastust, et päästa valla tohutu hulk psühhedeelseid efekte luues visuaalidest rikka teekonna läbi heli.</description>
+    <description lang="fi">MilkDrop oli alunperin Winampin visualisaattorilisäosa. Kuunnellessasi musiikkia MilkDrop lennättää sinut kuulemiesi ääniaaltojen läpi ja käyttää tahdintunnistusta lukemattomien psykedeelisten tehosteiden toistamiseen, luoden visuaalisen matkan musiikin läpi.</description>
+    <description lang="fr">MilkDrop était à l'origine une extension de visualisation musicale pour le lecteur audio Winamp. Pendant que vous écoutez votre musique, Milkdrop vous fait voyager à travers les ondes sonores que vous entendez, détectant le rythme pour déclencher une myriade d'effets psychédéliques, créant ainsi une riche expérience visuelle et sonore.</description>
+    <description lang="fr_CA">MilkDrop était à l'origine une extension de visualisation musicale pour le lecteur audio Winamp. Pendant que vous écoutez votre musique, Milkdrop vous fait voyager à travers les ondes sonores que vous entendez, détectant le rythme pour déclencher une myriade d'effets psychédéliques, créant ainsi une riche expérience visuelle et sonore.</description>
+    <description lang="gl">MilkDrop foi orixinalmente un plugin de Visualización para múica do reprodutor de música Winamp. Nametres vostede escoita a súa música, MilkDrop lévao voando a través das ondas de son que esta a ouvir, e emprega a detección de ritmo para activar milleiros de efectos psicodélicos, creando unha rica viaxe visual a través do son.</description>
+    <description lang="he">MilkDrop was originally a music visualizer "plug-in" to the Winamp music player. As you listen to your music, MilkDrop takes you flying through the actual soundwaves you're hearing, and uses beat detection to trigger myriad psychedelic effects, creating a rich visual journey through sound.</description>
+    <description lang="hr">MilkDrop je orginalno bio zamišljen kao "dodatak" za Winamp glazbeni svirač. Dok slušate svoju glazbu, MilkDrop vam omogućuje let kroz zvuk koji čujete i koristi otkrivanje taktova da bi pokrenuo bezbroj psihodeličnih efekata, tako stvarajući bogato vizualno  zvučno putovanje.</description>
+    <description lang="hu">A Milkdrop eredetileg egy beépülőmodul volt a Winamp zenelejátszóhoz. Ahogy hallgatod a zenét, a Milkdrop keresztülrepít a hallható hanghullámokon, felhasználva a dobritmust pszihedelikus effektusok létrehozására gazdag látványvilág megteremtésével.</description>
+    <description lang="is">Milkdrop var upprunalega viðbót við Winamp tónlistarspilarann. Þegar þú hlustar á tónlistina, fer Milkdrop með þig á flug í gegnum hljóðbylgjurnar sem þú heyrir og notar taktskynjun til að setja af stað allskonar effekta sem skapa myndrænt ferðalag í gegnum tónlistarupplifunina</description>
+    <description lang="it">MilkDrop era, in origine, un "plug-in" di visualizzazione per Winamp. Mentre ascolti la musica, MilkDrop ti fa volare tra le onde sonore di ciò che stai ascoltando usando la rilevazione del ritmo per sincronizzare una miriade di effetti psichedelici, creando un ricco viaggio visuale attraverso il suono.</description>
+    <description lang="ja">MilkDrop は元々 Winamp 音楽プレーヤーのビジュアライザープラグインでした。音楽を再生すると、音楽にあわせた波の上を飛んでいるような視覚効果が現れ、ビート検出により無数のサイケデリックな効果が生まれ、音による視覚的体験を生み出します。</description>
+    <description lang="ko">MilkDrop는 원래 윈앰프의 음악 시각화 플러그인입니다. 음악을 들으면서 사운드 웨이브로 날아가는듯한 효과를 보여주며 비트 감지를 해서 다양한 싸이키데릭한 효과를 만들어 풍부한 시각적 경험을 하게합니다.</description>
+    <description lang="lt">MilkDrop vizualizacija, gauta is Winamp. Klausantis muzikos, MilkDrop nukelia jus i nuostabu skrydi virs debesu, naudojamas ritmo aptikimas, kuris sinchronizuoja muzikos vaizdo efektus.</description>
+    <description lang="mk">MilkDrop беше визуализација допонување на Winamp music player. Како што ја слушате музиката, MilkDrop ве прелетува преку актуелните музички бранови, и користи детекција на битот за да покрене myriad психоделични ефекти, креирајќи богато визуелно патување низ звукот.</description>
+    <description lang="nl">Milkdrop was oorspronkelijk een muziekvisualisatieplug-in voor de Winamp-muziekspeler. Terwijl u uw muziek beluistert vliegt Milkdrop u door de soundwaves die u op dat moment hoort. Op basis van de beat produceert het een veelvoud aan psychedelische effecten.</description>
+    <description lang="no">MilkDrop var originalt et visualiseringstillegg til musikkavspilleren Winamp. Mens du lytter til musikken din, tar MilkDrop deg med på en flytur gjennom de faktiske lydbølgene du hører. Visualiseringen oppdager takten i musikken og bruker denne for å skape en rik, visuell ferd gjennom utallige, psykedeliske effekter.</description>
+    <description lang="pl">MilkDrop jest wizualizacją pochodzącą z odtwarzacza Winamp. W czasie słuchania muzyki, MilkDrop zabiera użytkownika w niesamowity lot pomiędzy aktualnie odtwarzanymi falami dźwiękowymi, używając detekcji beatu, która synchronizuje efekty wizualne z muzyką.</description>
+    <description lang="pt">Originalmente, o MilkDrop era uma visualização do leitor de música Winamp. Ao ouvir a sua música, o MilkDrop leva-o a voar pelas ondas sonoras que está a ouvir, detectando o ritmo da música e desencadeando uma variedade de efeitos psicadélicos. Cria, assim, uma viagem inesquecível pelo som.</description>
+    <description lang="pt_BR">MilkDrop era originalmente uma visualização do reprodutor de música Winamp. Ao ouvir a sua música, o MilkDrop leva-o a voar nas ondas sonoras que está a ouvir, usando detecção de batida para desencadear uma miríade de efeitos psicodélicos. Cria, assim, uma viagem visual inesquecível pelo som.</description>
+    <description lang="ro">MilkDrop a fost original un „modul” de vizualizare pentru lectorul de muzică Winamp. În timp ce ascultați muzica, MilkDrop vă face să zburați printre undele audio actuale pe care le auziți și folosește detecția bătăii pentru a activa miriada de efecte psihedelice, creând o călătorie vizuală bogată printre sunete.</description>
+    <description lang="ru">MilkDrop изначально был модулем визуализации музыки для проигрывателя Winamp. Когда вы слушаете музыку, MilkDrop создает визуальное ощущение полёта по звуковым волнам, а также использует обнаружение ритма для активации множества психоделических эффектов.</description>
+    <description lang="sk">MilkDrop bol pôvodne hudobným vizualizačným rozšírením Winamp prehrávača. Pri počúvaní hudby s Vami MilkDrop letí zvukovými vlnami, ktoré počúvate a použitím detekcie rytmu spúšťa nespočetné psychodelické efekty, a vytvára bohatú vizuálnu cestu zvukom.</description>
+    <description lang="sl">MilkDrop je bila prvotno vizualizacija za predvajalnik Winamp. Ko poslušate vašo glasbo, vas MilkDrop popelje skozi dejansko valovanje, ki ga slišite, in uporablja zaznavanje ritma, kar omogoči psihedelični efekt in bogato vizualno izkušnjo predvajanja glasbe.</description>
+    <description lang="sq">Milkrop fillimisht ishte një "plug-in" për vizualizimin e muzikës për riprodhuesin Winamp. Ndërsa dëgjonë muzikën tënde, Milkdrop vizualizon valët që i dëgjon dhe përdor zbulimin e tingullit për efekte të ndryshme.</description>
+    <description lang="sv">Milkdrop var ursprungligen ett visualiserarande ljudplug-in till Winamp. Medan du lyssnar på din musik så för dig Milkdrop flygande genom de ljudvågor du hör och använder rytmavkänning för att ge dig psykedeliska effekter som skapar en mäktig visuell resa via ljudet.</description>
+    <description lang="ta_IN">MilkDrop முதலில் Winamp இசை வாசிபானுடைய ஒரு இசை விசுவலைஸர் "செருகுநிரல்"ஆகும். நீங்கள் இசை கேட்டுக்கொண்டு இருக்குபோது, MilkDrop ஆனது உங்களை ஒலி அலைகளின் அமைப்புகேர்ப்ப உங்களை பறக்க செய்யும், மேலும் இசை துடிப்புகேர்ப்ப எண்ணற்ற சைக்டெலிக் விளைவுகளை உண்டாக்கும், ஒலி மூலம் ஒரு மறக்கமுடியாத காட்சி பயணம் உருவாக்கும்.</description>
+    <description lang="tg">MilkDrop аз ибтидо плагини таҷассуми мусиқие барои плеери мусиқии Winamp буд. Вақте ки шумо мусиқиро мешунавед, MilkDrop бо мавҷҳои садояш фораму роҳатбахш аст, ва муайянкуни битҳои мусиқиро барои эҷоди таъсирҳои девонагӣ истифода мекунад ва шуморо ба сайёҳии мусиқӣ мебарад.</description>
+    <description lang="th">MilkDrop แต่เดิมเป็น "ปลั๊ก-อิน" การแสดงแสงสีประกอบเพลง ของโปรแกรมเล่นเพลง Winamp.  ในขณะที่คุณฟังเพลงของคุณ, MilkDrop นำคุณบินผ่านคลื่นเสียงที่เกิดขึ้นตามที่คุณได้ยิน, และใช้การจับจังหวะ ในการส่งผลต่อเอฟเฟคภาพลวงตา อันหลากหลาย, สร้างภาพอันตื่นตาในการเดินทางไปตามเสียงเพลง.</description>
+    <description lang="tr">MilkDrop aslında Winamp müzik çalıcısı için görsel bir "eklenti" dir. Müziğinizi dinlerken, Milkdrop size işittiğiniz ses dalgaları arasında uçuyormuşcasına bir his ve ritm algılayıcısı ile de en çılgın efektleri yaşıyormuşçasına görsel bir şölen sunar.</description>
+    <description lang="uk">MilkDrop спочатку був додатком візуалізації музики для програвача музики Winamp. MilkDrop створює багату гаму візуалізації музики, використовуючи власний механізм визначення музичних тактів.</description>
+    <description lang="vi">MilkDrop ban đầu là một "plug-in" trình diễn nhạc cho Winamp. Khi bạn nghe nhạc, MilkDrop sẽ làm bạn bay bổng trong âm thanh bạn đang nghe, và sử dụng bộ dò giai điệu để kích hoạt vô số những hiệu ứng ảo, tạo ra một cuộc hành trình âm thanh qua mắt thường</description>
+    <description lang="zh">MilkDrop 是来自于 Winamp 音乐播放器的可视化效果插件。在你听音乐时，MilkDrop 通过节拍检测触发的无数迷幻的效果，带你与声波一起飞翔，给你带来丰富的音乐和视觉旅程。</description>
+    <description lang="zh_TW">MilkDrop是來自於Winamp音樂播放器的視覺效果插件。在您在聽音樂時，MilkDrop通過節奏偵測觸發的無數夢幻的效果，帶您穿越聆聽中的音樂饗宴，也給您帶來豐富的聲音和視覺效果的奇幻旅程。</description>
+    <platform>windows-x86_64</platform>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/screenshot-01.jpg</screenshot>
+      <screenshot>resources/fanart.jpg</screenshot>
+      <screenshot>resources/screenshot-02.jpg</screenshot>
+      <screenshot>resources/screenshot-03.jpg</screenshot>
+      <screenshot>resources/screenshot-04.jpg</screenshot>
+      <screenshot>resources/screenshot-05.jpg</screenshot>
+      <screenshot>resources/screenshot-06.jpg</screenshot>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="weather.openweathermap.extended" name="OpenWeatherMap Extended" version="5.0.2" provider-name="ronie">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+		<import addon="script.openweathermap.maps" version="0.02.0"/>
+	</requires>
+	<extension point="xbmc.python.weather" library="default.py"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="bg_BG">Синоптична прогноза от openweathermap.org</summary>
+		<summary lang="cs_CZ">Předpověď počasí z openweathermap.org</summary>
+		<summary lang="cy_GB">Rhagolygon y tywydd gan openweathermap.org</summary>
+		<summary lang="de_DE">Wettervorhersage von openweathermap.org</summary>
+		<summary lang="el_GR">Πρόγνωση καιρού από το openweathermap.org</summary>
+		<summary lang="en_GB">Weather forecast from openweathermap.org</summary>
+		<summary lang="en_NZ">Weather forecast from openweathermap.org</summary>
+		<summary lang="en_US">Weather forecast from openweathermap.org</summary>
+		<summary lang="es_ES">Predicción meteorológica de openweathermap.org</summary>
+		<summary lang="fi_FI">Sääennuste openweathermap.org :sta</summary>
+		<summary lang="fr_FR">Prévisions météo d'openweathermap.org</summary>
+		<summary lang="fr_CA">Prévisions météorologiques de openweathermap.org</summary>
+		<summary lang="gl_ES">Previsión meteorolóxica de openweathermap.org</summary>
+		<summary lang="he_IL">תחזית מזג אויר מאת openweathermap.org</summary>
+		<summary lang="hr_HR">Vremenska prognoza s openweathermap.org</summary>
+		<summary lang="hu_HU">Időjárás előrejelzés az openweathermap.org oldalról</summary>
+		<summary lang="is_IS">Veðurspá frá openweathermap.org</summary>
+		<summary lang="it_IT">Previsioni meteo da openweathermap.org</summary>
+		<summary lang="ko_KR">openweathermap.org 날씨 예보</summary>
+		<summary lang="lt_LT">Orų prognozė iš openweathermap.org</summary>
+		<summary lang="nl_NL">Weersvoorspelling van openweathermap.org</summary>
+		<summary lang="pl_PL">Prognoza pogody z serwisu openweathermap.org</summary>
+		<summary lang="pt_PT">Previsão meteorológica a partir de openweathermap.org</summary>
+		<summary lang="pt_BR">Previsão do Clima por openweathermap.org</summary>
+		<summary lang="ro_RO">Previziuni meteo de la openweathermap.org</summary>
+		<summary lang="ru_RU">Прогноз погоды от openweathermap.org</summary>
+		<summary lang="sl_SI">Vremenska napoved openweathermap.org</summary>
+		<summary lang="sr_RS">Временска прогноза са openweathermap.org</summary>
+		<summary lang="sv_SE">Väderprognos från openweathermap.org</summary>
+		<summary lang="tr_TR">Hava durumu - openweathermap.org</summary>
+		<description lang="bg_BG">Синоптична прогноза, предоставена от OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="cs_CZ">Předpověď počasí poskytnuta OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="de_DE">Wettervorhersage bereitgestellt durch OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="el_GR">Η πρόγνωση καιρού παρέχεται από το OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="en_GB">Weather forecast provided by OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="en_NZ">Weather forecast provided by OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="en_US">Weather forecast provided by OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="es_ES">Predicción meteorológica proporcionada por OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="fi_FI">Sääennusteen tarjoaa OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="fr_FR">Prévisions météo fournies par OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="fr_CA">Prévisions météorologiques fournies OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="gl_ES">Previsión meteorolóxica fornecida por OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="he_IL">תחזית מזג האויר מסופקת ע"י OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="hr_HR">Vremenska prognoza dostupna od strane OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="hu_HU">Az időjárás előrejelzést biztosítja az OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="is_IS">Veðurspá kemur frá OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="it_IT">Previsioni meteo fornite da OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="ko_KR">OpenWeatherMap (http://openweathermap.org/) 에서 제공하는 날씨 예보</description>
+		<description lang="lt_LT">Orų prognozė pateikta OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="nl_NL">Weersvoorspelling voorzien door OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="pl_PL">Prognoza pogody dostarczana przez serwis OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="pt_PT">Previsão metereológica fornecida por OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="pt_BR">Previsão do Tempo provida por OpenWeatherMap&amp;#10;(http://openweathermap.org/)</description>
+		<description lang="ro_RO">Prognoză meteo oferită de OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="ru_RU">Прогноз погоды предоставлен OpenWeatherMap&amp;#10;(http://openweathermap.org/)</description>
+		<description lang="sl_SI">Vremensko napoved zagotavlja OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="sr_RS">Временску прогнозу омогућио OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="sv_SE">Väderprognos tillhandahållen av OpenWeatherMap (http://openweathermap.org/)</description>
+		<description lang="tr_TR">OpenWeatherMap tarafından sağlana hava durumu tahmini (http://openweathermap.org/)</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=207110</forum>
+		<website></website>
+		<email></email>
+		<source>https://gitlab.com/ronie/weather.openweathermap.extended/</source>
+	</extension>
+</addon>
+</addons>
