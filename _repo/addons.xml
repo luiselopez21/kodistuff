@@ -267,6 +267,21 @@ v0.8.0 (2017-11-08)
   </extension>
 </addon>
 
+<addon id="service.eventghost.server" name="EventGhost Server" version="0.0.3" provider-name="Kodi Stuff">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="resources/lib/runner.py"/>
+  <extension point="xbmc.addon.metadata">
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+    <platform>all</platform>
+    <summary lang="en_US">EventGhost Server for Kodi.</summary>
+    <description lang="en_US">EventGhost Server updates settings for EventGhost.</description>
+  </extension>
+</addon>
+
 <addon id="service.sleeptimer"
        name="Sleep Timer"
       version="2.0.10"
@@ -288,7 +303,7 @@ v0.8.0 (2017-11-08)
     </extension>
 </addon>
 
-<addon id="skin.estuary.custom" version="3.0.8" name="Estuary Custom" provider-name="phil65, Ichabod Fletchman">
+<addon id="skin.estuary.custom" version="3.0.9" name="Estuary Custom" provider-name="phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 	</requires>
