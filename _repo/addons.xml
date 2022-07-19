@@ -282,6 +282,21 @@ v0.8.0 (2017-11-08)
   </extension>
 </addon>
 
+<addon id="service.eventghost.server.home" name="EventGhost Server Home" version="0.1.5" provider-name="Kodi Stuff">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="resources/lib/runner.py"/>
+  <extension point="xbmc.addon.metadata">
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+    <platform>all</platform>
+    <summary lang="en_US">EventGhost Server for Kodi.</summary>
+    <description lang="en_US">EventGhost Server updates settings for EventGhost.</description>
+  </extension>
+</addon>
+
 <addon id="service.sleeptimer"
        name="Sleep Timer"
       version="2.0.10"
