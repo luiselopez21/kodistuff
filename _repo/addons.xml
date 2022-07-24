@@ -318,7 +318,7 @@ v0.8.0 (2017-11-08)
     </extension>
 </addon>
 
-<addon id="skin.estuary.custom" version="3.0.9" name="Estuary Custom" provider-name="phil65, Ichabod Fletchman">
+<addon id="skin.estuary.custom" version="3.1.0" name="Estuary Custom" provider-name="phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 	</requires>
@@ -585,6 +585,27 @@ Subscription required.</description>
     <language></language>
     <website></website>
     <news>Move EPG into Playlist</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="slyguy.pluto.tv.provider" name="Pluto TV" provider-name="SlyGuy" version="0.5.6">
+  <requires>
+    <import addon="script.module.slyguy"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch all your favourite Pluto TV channels live anywhere. No subscription required.</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Fix Adverts</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
